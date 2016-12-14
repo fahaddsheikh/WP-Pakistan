@@ -10,20 +10,17 @@
 
 include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big-grid-shortcode.php' );
 include( get_stylesheet_directory() . '/shortcodes/bep_trendingnow/bep_trendingnow-shortcode.php' );
+
 /* 
 *
 * Sizes for all Images 
 *
 */
 
-// BIGGRID BigSquare Images
-add_image_size( 'biggrid-large-square', 534, 462, array( 'center', 'top' ) );
-
-// BIGGRID Horizontal Images
-add_image_size( 'biggrid-horizontal', 533, 261, array( 'center', 'top' ) );
-
-// BIGGRID Small Images
-add_image_size( 'biggrid-small', 265, 198, array( 'center', 'top' ) );
+// BIGGRID 
+add_image_size( 'biggrid-large-square', 649, 500, array( 'center', 'top' ) );
+add_image_size( 'biggrid-horizontal', 648, 297, array( 'center', 'top' ) );
+add_image_size( 'biggrid-small', 322, 200, array( 'center', 'top' ) );
 
 
 

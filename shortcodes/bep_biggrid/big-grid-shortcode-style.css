@@ -7,7 +7,7 @@
     padding-bottom: 48px;
     position: relative;
     clear: both;
-    max-width: 1100px;
+    max-width: 1300px;
     margin: auto;
 }
 
@@ -23,8 +23,8 @@
     margin: 0;
     position:relative;
     background-color: #e5e5e5;
-    width: 532px;
-    height: 462px;
+    width: 649px;
+    height: 500px;
 }
 
 .bep_biggrid_thumb a::before {
@@ -165,8 +165,8 @@
 }
 
 .bep_biggrid_horizontal_thumb .bep_biggrid_thumb {
-    width: 533px;
-    height: 261px;
+    width: 648px;
+    height: 297px;
     background-color: #e5e5e5;
     overflow: hidden;
     margin: 0;
@@ -180,8 +180,8 @@
 }
 
 .bep_biggrid_small_thumb .bep_biggrid_thumb {
-    width: 265px;
-    height: 198px;
+    width: 322px;
+    height: 200px;
     background-color: #e5e5e5;
     overflow: hidden;
     margin: 0;

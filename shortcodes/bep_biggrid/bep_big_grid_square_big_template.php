@@ -3,7 +3,7 @@
 $return_string .=	"<div class='{$prefix}biggrid {$prefix}biggrid_square_big'>";
 $return_string .=		"<div class='{$prefix}biggrid_thumb'>";
 $return_string .=			"<a href='" . get_permalink() . "' rel='bookmark' title='" . get_the_title() . "'>";
-$return_string .=				"<img width='534' height='462' src='" . wp_get_attachment_image_src(get_post_thumbnail_id($id), 'biggrid-large-square', false)[0] . "' title='" . get_the_title() . "'>";
+$return_string .=				"<img width='649' height='500' src='" . wp_get_attachment_image_src(get_post_thumbnail_id($id), 'biggrid-large-square', false)[0] . "' title='" . get_the_title() . "'>";
 $return_string .=			"</a>";
 $return_string .=		"</div>";           
 $return_string .=		"<div class='{$prefix}details_container'>";
