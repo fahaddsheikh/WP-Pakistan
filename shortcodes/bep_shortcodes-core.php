@@ -21,6 +21,8 @@ include( get_stylesheet_directory() .'/shortcodes/bep_shortodes_1/bep_shortcodes
 add_image_size( 'biggrid-large-square', 649, 500, array( 'center', 'top' ) );
 add_image_size( 'biggrid-horizontal', 648, 297, array( 'center', 'top' ) );
 add_image_size( 'biggrid-small', 322, 200, array( 'center', 'top' ) );
+add_image_size( 'bep_shortcodes_1-small', 100, 70, array( 'center', 'top' ) );
+add_image_size( 'bep_shortcodes_1-big', 324, 235, array( 'center', 'top' ) );
 
 
 

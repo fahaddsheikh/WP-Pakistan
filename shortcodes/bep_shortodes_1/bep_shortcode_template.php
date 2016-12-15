@@ -5,7 +5,7 @@ $return_string.='<div class="bep_module_4 bep_module_wrap bep-animation-stack">'
 $return_string.='	<div class="bep-module-image">';
 $return_string.='		<div class="bep-module-thumb">';
 $return_string.='			<a href="' . get_permalink() . '" rel="bookmark" title="'.get_the_title().'">';
-$return_string.='				<img width="324" height="235" class="entry-thumb bep-animation-stack-type0-1" src="' . wp_get_attachment_image_src(get_post_thumbnail_id($id), 'bep_shortcode_1', false)[0] . '" alt="" title="'. get_the_title() . '">';
+$return_string.='				<img width="324" height="235" class="entry-thumb bep-animation-stack-type0-1" src="' . wp_get_attachment_image_src(get_post_thumbnail_id($id), 'bep_shortcodes_1-big', false)[0] . '" alt="" title="'. get_the_title() . '">';
 $return_string.='			</a>';
 $return_string.='		</div>';
 								$bep_selectedtype = get_post_meta( get_the_id(), 'bep_type', true );
