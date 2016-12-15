@@ -4,29 +4,33 @@ body, p {
     font-size: 14px;
     line-height: 21px;
 }
-.bep_block_wrap.bep_block_1.bep_uid_13_584f75f11d0a6_rand.bep_with_ajax_pagination.bep-pb-border-top.red-block {
-	max-width:700px;
-}
+
 .bep_block_wrap {
     padding-bottom: 22px;
     position: relative;
     clear: both;
+    width:100%;
 }
-.bep-block-title-wrap {
+
+.bep_block_wrap a {
+    color:#000;
+}
+
+.bep_block-title-wrap {
     position: relative;
 }
 
-.bep-md-is-android .block-title span, .bep-md-is-android .block-title a, .bep-md-is-android .block-title label {
+.bep_md-is-android .block-title span, .bep_md-is-android .block-title a, .bep_md-is-android .block-title label {
     padding: 8px 12px 3px;
 }
-.bep-js-loaded .bep-subcat-filter {
+.bep_js-loaded .bep_subcat-filter {
     opacity: 1;
     -webkit-transition: opacity 0.3s;
     -moz-transition: opacity 0.3s;
     -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
 }
-.bep-subcat-filter {
+.bep_subcat-filter {
     display: inline-block;
     position: absolute;
     bottom: 0;
@@ -43,27 +47,27 @@ a {
 a {
     background-color: transparent;
 }
-.bep-md-is-android .bep-subcat-filter .bep-subcat-list, .bep-md-is-android .bep-subcat-filter .bep-subcat-dropdown .bep-subcat-more {
+.bep_md-is-android .bep_subcat-filter .bep_subcat-list, .bep_md-is-android .bep_subcat-filter .bep_subcat-dropdown .bep_subcat-more {
     padding-top: 6px;
 }
-.bep-subcat-filter .bep-subcat-list {
+.bep_subcat-filter .bep_subcat-list {
     display: inline-block;
     vertical-align: top;
     padding-top: 3px;
 }
-.bep-subcat-filter ul {
+.bep_subcat-filter ul {
     margin: 0;
 }
 ul, ol {
     padding: 0;
 }
-li.bep-subcat-item {
+li.bep_subcat-item {
 	    transition: opacity 0.2s;
     opacity: 1;
 
 	
 }
-.bep-subcat-filter .bep-subcat-list .bep-subcat-item {
+.bep_subcat-filter .bep_subcat-list .bep_subcat-item {
     display: inline-block;
     line-height: 1;
     margin-left: 30px;
@@ -75,7 +79,7 @@ li.bep-subcat-item {
     background-color: #da3b46;
     color: #fff;
 }
-.bep-subcat-filter .bep-subcat-list a {
+.bep_subcat-filter .bep_subcat-list a {
     font-family: 'Roboto', sans-serif;
     font-size: 13px;
     color: #777;
@@ -95,15 +99,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     margin: 6px 0 6px 0;
 }
-.bep-md-is-android .bep-subcat-filter .bep-subcat-list, .bep-md-is-android .bep-subcat-filter .bep-subcat-dropdown .bep-subcat-more {
+.bep_md-is-android .bep_subcat-filter .bep_subcat-list, .bep_md-is-android .bep_subcat-filter .bep_subcat-dropdown .bep_subcat-more {
     padding-top: 6px;
 }
 
-.bep-block-row {
+.bep_block-row {
     margin-left: -24px;
     margin-right: -24px;
 }
-.bep-block-row [class*="bep-block-span"] {
+.bep_block-row [class*="bep_shortcode-1-template-"] {
     display: block;
     min-height: 1px;
     float: left;
@@ -111,22 +115,22 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 24px;
 	box-sizing: border-box;
 }
-.bep-block-span6 {
-    width: 50%;
+.bep_shortcode-1-template-big {
+    width: 40%;
 }
 
-.bep-module-image {
+.bep_module-image {
     position: relative;
 }
 
-a, cite a:hover, .bep_mega_menu_sub_cats .cur-sub-cat, .bep-mega-span h3 a:hover, .bep_mod_mega_menu:hover .entry-title a, .header-search-wrap .result-msg a:hover, .top-header-menu li a:hover, .top-header-menu .current-menu-item > a, .top-header-menu .current-menu-ancestor > a, .top-header-menu .current-category-ancestor > a, .bep-social-icon-wrap > a:hover, .bep-header-sp-top-widget .bep-social-icon-wrap a:hover, .bep-page-content blockquote p, .bep-post-content blockquote p, .mce-content-body blockquote p, .comment-content blockquote p, .wpb_text_column blockquote p, .bep_block_text_with_title blockquote p, .bep_module_wrap:hover .entry-title a, .bep-subcat-filter .bep-subcat-list a:hover, .bep-subcat-filter .bep-subcat-dropdown a:hover, .bep_quote_on_blocks, .dropcap2, .dropcap3, .bep_top_authors .bep-active .bep-authors-name a, .bep_top_authors .bep_mod_wrap:hover .bep-authors-name a, .bep-post-next-prev-content a:hover, .author-box-wrap .bep-author-social a:hover, .bep-author-name a:hover, .bep-author-url a:hover, .bep_mod_related_posts:hover h3 > a, .bep-post-template-11 .bep-related-title .bep-related-left:hover, .bep-post-template-11 .bep-related-title .bep-related-right:hover, .bep-post-template-11 .bep-related-title .bep-cur-simple-item, .bep-post-template-11 .bep_block_related_posts .bep-next-prev-wrap a:hover, .comment-reply-link:hover, .logged-in-as a:hover, #cancel-comment-reply-link:hover, .bep-search-query, .bep-category-header .bep-pulldown-category-filter-link:hover, .bep-category-siblings .bep-subcat-dropdown a:hover, .bep-category-siblings .bep-subcat-dropdown a.bep-current-sub-category, .widget a:hover, .widget_calendar tfoot a:hover, .woocommerce a.added_to_cart:hover, #bbpress-forums li.bbp-header .bbp-reply-content span a:hover, #bbpress-forums .bbp-forum-freshness a:hover, #bbpress-forums .bbp-topic-freshness a:hover, #bbpress-forums .bbp-forums-list li a:hover, #bbpress-forums .bbp-forum-title:hover, #bbpress-forums .bbp-topic-permalink:hover, #bbpress-forums .bbp-topic-started-by a:hover, #bbpress-forums .bbp-topic-started-in a:hover, #bbpress-forums .bbp-body .super-sticky li.bbp-topic-title .bbp-topic-permalink, #bbpress-forums .bbp-body .sticky li.bbp-topic-title .bbp-topic-permalink, .widget_display_replies .bbp-author-name, .widget_display_topics .bbp-author-name, .footer-text-wrap .footer-email-wrap a, .bep-subfooter-menu li a:hover, .footer-social-wrap a:hover, a.vc_btn-black:hover, .bep-smart-list-dropdown-wrap .bep-smart-list-button:hover, .bep_module_17 .bep-read-more a:hover, .bep_module_18 .bep-read-more a:hover, .bep_module_19 .bep-post-author-name a:hover, .bep-instagram-user a {
+a, cite a:hover, .bep_mega_menu_sub_cats .cur-sub-cat, .bep_mega-span h3 a:hover, .bep_mod_mega_menu:hover .entry-title a, .header-search-wrap .result-msg a:hover, .top-header-menu li a:hover, .top-header-menu .current-menu-item > a, .top-header-menu .current-menu-ancestor > a, .top-header-menu .current-category-ancestor > a, .bep_social-icon-wrap > a:hover, .bep_header-sp-top-widget .bep_social-icon-wrap a:hover, .bep_page-content blockquote p, .bep_post-content blockquote p, .mce-content-body blockquote p, .comment-content blockquote p, .wpb_text_column blockquote p, .bep_block_text_with_title blockquote p, .bep_module_wrap:hover .entry-title a, .bep_subcat-filter .bep_subcat-list a:hover, .bep_subcat-filter .bep_subcat-dropdown a:hover, .bep_quote_on_blocks, .dropcap2, .dropcap3, .bep_top_authors .bep_active .bep_authors-name a, .bep_top_authors .bep_mod_wrap:hover .bep_authors-name a, .bep_post-next-prev-content a:hover, .author-box-wrap .bep_author-social a:hover, .bep_author-name a:hover, .bep_author-url a:hover, .bep_mod_related_posts:hover h3 > a, .bep_post-template-11 .bep_related-title .bep_related-left:hover, .bep_post-template-11 .bep_related-title .bep_related-right:hover, .bep_post-template-11 .bep_related-title .bep_cur-simple-item, .bep_post-template-11 .bep_block_related_posts .bep_next-prev-wrap a:hover, .comment-reply-link:hover, .logged-in-as a:hover, #cancel-comment-reply-link:hover, .bep_search-query, .bep_category-header .bep_pulldown-category-filter-link:hover, .bep_category-siblings .bep_subcat-dropdown a:hover, .bep_category-siblings .bep_subcat-dropdown a.bep_current-sub-category, .widget a:hover, .widget_calendar tfoot a:hover, .woocommerce a.added_to_cart:hover, #bbpress-forums li.bbp-header .bbp-reply-content span a:hover, #bbpress-forums .bbp-forum-freshness a:hover, #bbpress-forums .bbp-topic-freshness a:hover, #bbpress-forums .bbp-forums-list li a:hover, #bbpress-forums .bbp-forum-title:hover, #bbpress-forums .bbp-topic-permalink:hover, #bbpress-forums .bbp-topic-started-by a:hover, #bbpress-forums .bbp-topic-started-in a:hover, #bbpress-forums .bbp-body .super-sticky li.bbp-topic-title .bbp-topic-permalink, #bbpress-forums .bbp-body .sticky li.bbp-topic-title .bbp-topic-permalink, .widget_display_replies .bbp-author-name, .widget_display_topics .bbp-author-name, .footer-text-wrap .footer-email-wrap a, .bep_subfooter-menu li a:hover, .footer-social-wrap a:hover, a.vc_btn-black:hover, .bep_smart-list-dropdown-wrap .bep_smart-list-button:hover, .bep_module_17 .bep_read-more a:hover, .bep_module_18 .bep_read-more a:hover, .bep_module_19 .bep_post-author-name a:hover, .bep_instagram-user a {
     color: #2860a5;
 }
-.bep-module-image .bep-post-category {
+.bep_module-image .bep_post-category {
     position: absolute;
     bottom: 0;
 }
-.bep-post-category {
+.bep_post-category {
     font-family: 'Open Sans', arial, sans-serif;
     font-size: 10px;
     font-weight: 600;
@@ -147,7 +151,7 @@ img {
 img {
     border: 0;
 }
-.bep-video-play-ico > img {
+.bep_video-play-ico > img {
     position: absolute;
     margin: auto;
     top: 0;
@@ -170,34 +174,34 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     color: #111111;
 }
 
-.bep-post-author-name {
+.bep_post-author-name {
     font-weight: bold;
     display: inline-block;
     position: relative;
     top: 2px;
 }
-.bep-post-author-name a {
+.bep_post-author-name a {
     color: #000;
 }
-.bep-post-author-name span {
+.bep_post-author-name span {
     color: #ccc;
     margin: 0 2px 0 2px;
     font-weight: normal;
 }
-.bep-post-date {
+.bep_post-date {
     color: #aaa;
     display: inline-block;
     position: relative;
     top: 2px;
 }
-.bep-module-meta-info {
+.bep_module-meta-info {
     font-family: 'Open Sans', arial, sans-serif;
     font-size: 11px;
     margin-bottom: 7px;
     line-height: 1;
     min-height: 17px;
 }
-.bep-module-comments {
+.bep_module-comments {
     position: relative;
     float: right;
     font-family: 'Open Sans', arial, sans-serif;
@@ -206,7 +210,7 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     text-align: center;
     line-height: 1;
 }
-.bep-module-comments a {
+.bep_module-comments a {
     color: #fff;
     background-color: #000;
     display: inline-block;
@@ -214,7 +218,7 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     padding: 3px 4px 4px 5px;
     position: relative;
 }
-.bep-module-comments a:after {
+.bep_module-comments a:after {
     position: absolute;
     bottom: -3px;
     left: 0;
@@ -226,19 +230,24 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     border-color: #000 transparent transparent transparent;
 }
 
-.bep-excerpt {
+.bep_excerpt {
     font-size: 13px;
     color: #777;
     font-family: 'Open Sans', arial, sans-serif;
     margin-top: 9px;
+    line-height: 19px;
 }
 .bep_block_1 .bep_module_4 {
     padding-bottom: 21px;
 }
 
-.bep-block-span6 {
-	width:50%;
-   
+.bep_shortcode-1-template-wide {
+	width:60%;  
+}
+.bep_shortcode-1-template-wide > div {
+    width:45%;
+    float:left; 
+    margin:0 10px;
 }
 .bep_module_6 {
     padding-bottom: 26px;
@@ -247,16 +256,16 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     position: relative;
     padding-bottom: 35px;
 }
-.bep_module_6 .bep-module-thumb {
+.bep_module_6 .bep_module-thumb {
     position: absolute;
     left: 0;
     top: 0;
 }
-.bep-module-thumb {
+.bep_module-thumb {
     position: relative;
     margin-bottom: 13px;
 }
-.bep-module-thumb .entry-thumb {
+.bep_module-thumb .entry-thumb {
     display: block;
 }
 .bep_module_6 .item-details {
@@ -264,38 +273,38 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     min-height: 70px;
 }
 
-.bep-block-row:after {
+.bep_block-row:after {
     clear: both;
 }
-.bep_block_wrap .bep-next-prev-wrap, .bep_block_wrap .bep-load-more-wrap {
+.bep_block_wrap .bep_next-prev-wrap, .bep_block_wrap .bep_load-more-wrap {
     margin-bottom: 26px;
 }
-.bep-next-prev-wrap {
+.bep_next-prev-wrap {
     position: relative;
     clear: both;
 }
-.red-block .bep-next-prev-wrap a {
+.red-block .bep_next-prev-wrap a {
     background-color: #da3b46;
     border-color: #da3b46;
     color: #fff;
 }
 
-.bep-md-is-android .bep-next-prev-wrap a {
+.bep_md-is-android .bep_next-prev-wrap a {
     line-height: 25px;
 }
-.bep-next-prev-wrap .bep-ajax-prev-page {
+.bep_next-prev-wrap .bep_ajax-prev-page {
     padding-right: 1px;
 }
 
-.bep-next-prev-wrap .ajax-page-disabled {
+.bep_next-prev-wrap .ajax-page-disabled {
     opacity: 0.5;
 }
-.black-block .bep-next-prev-wrap a, .bep-next-prev-wrap a {
+.black-block .bep_next-prev-wrap a, .bep_next-prev-wrap a {
     background-color: #000;
     border-color: #000;
     color: #fff;
 }
-.bep-next-prev-wrap a {
+.bep_next-prev-wrap a {
     display: inline-block;
     margin-right: 7px;
     width: 25px;
@@ -307,15 +316,15 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     font-size: 7px;
     color: #b7b7b7;
 }
-[class*="bep-icon-"] {
+[class*="bep_icon-"] {
     line-height: 1;
     text-align: center;
     display: inline-block;
 }
-.bep-icon-menu-left:before {
+.bep_icon-menu-left:before {
     content: '\e80c';
 }
-[class^="bep-icon-"]:before, [class*=" bep-icon-"]:before {
+[class^="bep_icon-"]:before, [class*=" bep_icon-"]:before {
     font-family: 'newspaper';
     speak: none;
     font-style: normal;
@@ -327,14 +336,14 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.bep-icon-menu-right:before {
+.bep_icon-menu-right:before {
     content: '\e80d';
 }
 .td_module_wrap .entry-title {
     font-weight: 500;
 }
 
-.item-details > h3.entry-title.bep-module-title {
+.item-details > h3.entry-title.bep_module-title {
     font-size: 14px !important;
     line-height: 20px;
     margin-bottom: 4px;
@@ -342,4 +351,13 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
 }
 .clearfix{
 	clear:both;
+}
+
+@media (max-width: 768px) {
+    .bep_shortcode-1-template-big {
+        width: 100%;
+    }
+    .bep_shortcode-1-template-wide {
+        width: 100%;
+    }
 }

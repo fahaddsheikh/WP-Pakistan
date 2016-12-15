@@ -2,7 +2,7 @@
 	$return_string .=	"<div class='{$prefix}biggrid {$prefix}biggrid_horizontal_thumb'>	";
 	$return_string .=		"<div class='{$prefix}biggrid_thumb'>	";
 	$return_string .=			"<a href='" . get_permalink() . "' rel='bookmark' title='" . get_the_title() . "'>	";
-	$return_string .=				"<img width='648' height='297' src='" . wp_get_attachment_image_src(get_post_thumbnail_id($id), 'biggrid-horizontal', false)[0] . "' title='" . get_the_title() . "'>";
+	$return_string .=				 get_the_post_thumbnail( get_the_id() ,  'biggrid-horizontal' );
 	$return_string .=			"</a>";
 	$return_string .=		"</div>";        
 	$return_string .=		"<div class='{$prefix}details_container'>	";

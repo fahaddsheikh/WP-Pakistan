@@ -21,8 +21,10 @@ include( get_stylesheet_directory() .'/shortcodes/bep_shortodes_1/bep_shortcodes
 add_image_size( 'biggrid-large-square', 649, 500, array( 'center', 'top' ) );
 add_image_size( 'biggrid-horizontal', 648, 297, array( 'center', 'top' ) );
 add_image_size( 'biggrid-small', 322, 200, array( 'center', 'top' ) );
-add_image_size( 'bep_shortcodes_1-small', 100, 70, array( 'center', 'top' ) );
+
+// Shortcode 1 Image Sizes
 add_image_size( 'bep_shortcodes_1-big', 324, 235, array( 'center', 'top' ) );
+add_image_size( 'bep_shortcodes_1-small', 100, 70, array( 'center', 'top' ) );
 
 
 
@@ -32,7 +34,7 @@ function bep_include_shortcode_styles() {
     wp_enqueue_style( 'bep_biggrid-style', get_stylesheet_directory_uri() . '/shortcodes/bep_biggrid/big-grid-shortcode-style.css' );
     wp_enqueue_style( 'bep_trendingnow-shortcode-style', get_stylesheet_directory_uri() . '/shortcodes/bep_trendingnow/bep_trendingnow-shortcode-style.css' );
     wp_enqueue_script( 'bep_trendingnow-shortcode-script', get_stylesheet_directory_uri() . '/shortcodes/bep_trendingnow/bep_trendingnow-shortcode-script.js', true );
-     wp_enqueue_style( 'bep_shortodes_1', get_stylesheet_directory_uri() . '/shortcodes/bep_shortodes_1/bep_shortcodes_1.css' );
+    wp_enqueue_style( 'bep_shortodes_1', get_stylesheet_directory_uri() . '/shortcodes/bep_shortodes_1/bep_shortcodes_1.css' );
 }
 add_action( 'wp_enqueue_scripts', 'bep_include_shortcode_styles' );
 
