@@ -12,6 +12,8 @@ include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big-grid-shor
 include( get_stylesheet_directory() . '/shortcodes/bep_trendingnow/bep_trendingnow-shortcode.php' );
 include( get_stylesheet_directory() .'/shortcodes/bep_shortcodes_1/bep_shortcodes_1.php');
 include( get_stylesheet_directory() .'/shortcodes/bep_shortcodes_3/bep_shortcode_3.php');
+include( get_stylesheet_directory() .'/shortcodes/bep_latest_reviews/bep_reviews-shortcode.php');
+
 /* 
 *
 * Sizes for all Images 
@@ -41,8 +43,7 @@ function bep_include_shortcode_styles() {
     wp_enqueue_script( 'bep_trendingnow-shortcode-script', get_stylesheet_directory_uri() . '/shortcodes/bep_trendingnow/bep_trendingnow-shortcode-script.js', true );
     wp_enqueue_style( 'bep_shortodes_1', get_stylesheet_directory_uri() . '/shortcodes/bep_shortcodes_1/bep_shortcodes_1.css' );
     wp_enqueue_style( 'bep_shortodes_3', get_stylesheet_directory_uri() . '/shortcodes/bep_shortcodes_3/bep_shortcode_3-style.css' );
-
-
+    wp_enqueue_style( 'bep_shortodes_reviews-style', get_stylesheet_directory_uri() . '/shortcodes/bep_latest_reviews/bep_latest_reviews-style.css' );
 }
 add_action( 'wp_enqueue_scripts', 'bep_include_shortcode_styles' );
 

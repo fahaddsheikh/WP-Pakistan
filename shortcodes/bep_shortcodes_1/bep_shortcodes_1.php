@@ -10,7 +10,13 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 	'bep_shortcode_1_taxonomy_terms' => ''
 	),$bep_shortcode_1_attr, 'bep_shortcode_1');
 	
-	$bep_shortcode_1_terms_array = array_map('intval', explode(',', $bep_shortcode_1_attr['bep_shortcode_1_taxonomy_terms']));
+	// If taxonomy terms are provided in the shortcode load them. Or load all posts from the provided or default taxonomy.
+	if (!empty($bep_shortcode_3_attr['bep_shortcode_3_taxonomy_terms'])) {
+		$bep_shortcode_1_terms_array = array_map('intval', explode(',', $bep_shortcode_1_attr['bep_shortcode_1_taxonomy_terms']));;
+	}
+	else {
+		$bep_shortcode_1_terms_array = get_terms( $bep_shortcode_1_attr['bep_shortcode_1_taxonomy_terms_name'], 'hide_empty=0&fields=ids' );
+	}
 
 	$bep_shortcode_1_args_1 = array(
 	'post_type' => $bep_shortcode_1_attr['bep_shortcode_1_custom_post_type'],
