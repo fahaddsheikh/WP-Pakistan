@@ -1,12 +1,12 @@
 <?php 
 // Add {$prefix}shortcode_1 Shortcode
 
-function bep_shortcode_reviews($bep_shortcode_1_attr) {
+function bep_shortcode_reviews($bep_shortcode_reviews_attr) {
 	// Shortcode Attributes
 	$bep_shortcode_reviews_attr = shortcode_atts ( array(
 	'bep_shortcode_reviews_title'=>'Latest Reviews',
 	'bep_shortcode_reviews_number' =>  '10'
-	),$bep_shortcode_reviews_attr, 'bep_shortcode_1');
+	),$bep_shortcode_reviews_attr, 'bep_shortcode_reviews');
 	
 
 	$bep_shortcode_reviews_args = array(
