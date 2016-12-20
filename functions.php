@@ -6,6 +6,7 @@
 
 //Include Biggrid Shortcode
 include( get_stylesheet_directory() . '/shortcodes/bep_shortcodes-core.php' );
+include( get_stylesheet_directory() . '/profile-module/be_profile_core.php' );
 
 function be_pakistan_custom_widgets_init() {
 
