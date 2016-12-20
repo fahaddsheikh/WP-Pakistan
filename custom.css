@@ -81,3 +81,11 @@ Add your custom styles in this file so it is easier to update the theme.
 .reviews-container .review-stars .review-ratings .review-rating-stars , .bep_module_wrap .bep_review-rating .review-stars  {
     color: #39843F;
 }
+
+
+/* Search CSS */
+
+.bep-search {
+    margin-right: -30%;
+    margin-left: -30%;
+}

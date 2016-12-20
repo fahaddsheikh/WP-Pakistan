@@ -2,7 +2,7 @@
 
 function be_profiles_enqueue_files() {
     wp_enqueue_style( 'be_profiles_custom_css', get_stylesheet_directory_uri() . '/profile-module/css/be_profiles_custom_css.css' );
-    wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/profile-module/includes/font-awesome/css/font-awesome.min.css.css' );
+    wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/profile-module/includes/font-awesome/css/font-awesome.min.css' );
     wp_enqueue_script( 'be_adsense', '//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', true );
     wp_enqueue_script( 'be_profiles_custom_js', get_stylesheet_directory_uri() . '/profile-module/js/be_profiles_custom_js.js', array( 'jquery' ), '1.0.0', true );
     wp_localize_script( 'be_profiles_custom_js', 'myAjax', array( 
@@ -37,7 +37,7 @@ function be_custom_post_type_init() {
     $args = array(
         'public' => true,
         'label'  => 'Profiles',
-        'has_archive' => true,
+        'has_archive' => false,
         'supports' => array( // here we specify what the taxonomy supports
             'title',
             'editor',
