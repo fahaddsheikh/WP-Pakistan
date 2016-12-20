@@ -33,7 +33,7 @@ function bep_shortcode_3($bep_shortcode_3_attr) {
 	$bep_shortcode_3_query = new WP_Query( $bep_shortcode_3_args );
 
 	$prefix='bep_';
-	$return_string  = "<div class='{$prefix}block_wrap {$prefix}block_11 {$prefix}uid_28_585227ea93763_rand {$prefix}with_ajax_pagination {$prefix}pb-border-top black-block' >";
+	$return_string  = "<div class='{$prefix}block_wrap {$prefix}block_11 {$prefix}uid_28_585227ea93763_rand {$prefix}with_ajax_pagination {$prefix}pb-border-top black-block {$prefix}shortcode_3' >";
     $return_string .= "		<div class='{$prefix}block-title-wrap'>";
     $return_string .= "    	<h4 class='block-title'>";
     $return_string .= "	        <span style='margin-right: 0px;'>";

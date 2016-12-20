@@ -23,7 +23,7 @@ include( get_stylesheet_directory() .'/shortcodes/bep_latest_events/bep_events-s
 
 // BIGGRID 
 add_image_size( 'biggrid-large-square', 649, 500, array( 'center', 'top' ) );
-add_image_size( 'biggrid-horizontal', 648, 297, array( 'center', 'top' ) );
+add_image_size( 'biggrid-horizontal', 644, 297, array( 'center', 'top' ) );
 add_image_size( 'biggrid-small', 322, 200, array( 'center', 'top' ) );
 
 // Shortcode 1 Image Sizes
@@ -39,13 +39,15 @@ add_image_size( 'bep_shortcodes_3', 218,150, array( 'center', 'top' ) );
 //Include ALL STYLES for Shortcodes
 
 function bep_include_shortcode_styles() {
-    wp_enqueue_style( 'bep_biggrid-style', get_stylesheet_directory_uri() . '/shortcodes/bep_biggrid/big-grid-shortcode-style.css' );
+    wp_enqueue_style( 'bep_shortodes_reviews-style', get_stylesheet_directory_uri() . '/shortcodes/bep_shortcodes_style-core.css' );
+    
     wp_enqueue_style( 'bep_trendingnow-shortcode-style', get_stylesheet_directory_uri() . '/shortcodes/bep_trendingnow/bep_trendingnow-shortcode-style.css' );
     wp_enqueue_script( 'bep_trendingnow-shortcode-script', get_stylesheet_directory_uri() . '/shortcodes/bep_trendingnow/bep_trendingnow-shortcode-script.js', true );
-    wp_enqueue_style( 'bep_shortodes_1', get_stylesheet_directory_uri() . '/shortcodes/bep_shortcodes_1/bep_shortcodes_1.css' );
-    wp_enqueue_style( 'bep_shortodes_3', get_stylesheet_directory_uri() . '/shortcodes/bep_shortcodes_3/bep_shortcode_3-style.css' );
-    wp_enqueue_style( 'bep_shortodes_reviews-style', get_stylesheet_directory_uri() . '/shortcodes/bep_latest_reviews/bep_reviews-shortcode-style.css' );
-    wp_enqueue_style( 'bep_shortodes_events-style', get_stylesheet_directory_uri() . '/shortcodes/bep_latest_events/bep_events-shortcode-style.css' );
+    // wp_enqueue_style( 'bep_shortodes_1', get_stylesheet_directory_uri() . '/shortcodes/bep_shortcodes_1/bep_shortcodes_1.css' );
+    // wp_enqueue_style( 'bep_shortodes_3', get_stylesheet_directory_uri() . '/shortcodes/bep_shortcodes_3/bep_shortcode_3-style.css' );
+    //wp_enqueue_style( 'bep_biggrid-style', get_stylesheet_directory_uri() . '/shortcodes/bep_biggrid/big-grid-shortcode-style.css' );
+    //wp_enqueue_style( 'bep_shortodes_reviews-style', get_stylesheet_directory_uri() . '/shortcodes/bep_latest_reviews/bep_reviews-shortcode-style.css' );
+    //wp_enqueue_style( 'bep_shortodes_events-style', get_stylesheet_directory_uri() . '/shortcodes/bep_latest_events/bep_events-shortcode-style.css' );
 }
 add_action( 'wp_enqueue_scripts', 'bep_include_shortcode_styles' );
 

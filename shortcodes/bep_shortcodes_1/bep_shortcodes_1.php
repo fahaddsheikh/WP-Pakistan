@@ -45,7 +45,7 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 	);
 	$bep_shortcode_1_query_2 = new WP_Query( $bep_shortcode_1_args_2 );
 	$prefix = "bep_";
-	$return_string ="<div class='{$prefix}block_wrap {$prefix}block_1 {$prefix}pb-border-top red-block'>";
+	$return_string ="<div class='{$prefix}block_wrap {$prefix}block_1 {$prefix}pb-border-top red-block {$prefix}shortcode_1'>";
 	$return_string.=	"<div class='bep-block-title-wrap'><h4 class='block-title'><span style='margin-right: 0px;'>".$bep_shortcode_1_attr['bep_shortcode_1_title']."</span></h4>";
 	$return_string.="</div>";
 	$return_string.="<div class='{$prefix}block_inner'>";

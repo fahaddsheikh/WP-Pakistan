@@ -8,7 +8,16 @@ $return_string.='			</a>';
 $return_string.='		</div>';
 $return_string.='		<div class="item-details">';
 $return_string.='			<h3 class="entry-title bep_module-title">';
-$return_string.='				<a href="'. get_permalink() .'" rel="bookmark" title="'.get_the_title().'">'.get_the_title().'';
+
+if (strlen(get_the_title())>=60)
+{ 
+	 $return_string.='<a href="'. get_permalink() .'" rel="bookmark" title="'.get_the_title().'">';
+	 $return_string.= substr_replace(get_the_title(),'...', 60);
+}
+else {
+	$return_string.='<a href="'. get_permalink() .'" rel="bookmark" title="'.get_the_title().'">';
+	$return_string.=get_the_title();
+}
 $return_string.='				</a>';
 $return_string.='			</h3>';
 $return_string.='			<div class="bep_module-meta-info">';

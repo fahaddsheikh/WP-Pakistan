@@ -20,7 +20,7 @@ function bep_shortcode_reviews($bep_shortcode_reviews_attr) {
 
 
 
-	$return_string ="<div class='{$prefix}block_wrap {$prefix}block_1 {$prefix}pb-border-top red-block'>";
+	$return_string ="<div class='{$prefix}block_wrap {$prefix}block_1 {$prefix}pb-border-top red-block {$prefix}shortcode_reviews'>";
 	$return_string.=	"<div class='bep-block-title-wrap'><h4 class='block-title'><span style='margin-right: 0px;'>".$bep_shortcode_reviews_attr['bep_shortcode_reviews_title']."</span></h4>";
 	$return_string.="</div>";
 	$return_string.="<div class='{$prefix}block_inner'>";

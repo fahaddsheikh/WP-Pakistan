@@ -82,14 +82,14 @@ function bep_biggrid( $bep_biggrid_square_shortcode_atts ) {
 	// END
 
 	$prefix = "bep_" ;
-	$return_string =	"<div class='{$prefix}biggrid-container'>";
-	$return_string .=		"<div id='{$prefix}biggrid_inner'>";
-	$return_string .=			"<div class='{$prefix}biggrid_wrapper'>";
+	$return_string =	"<div class='{$prefix}block_wrap {$prefix}block_big_grid_3 {$prefix}uid_12_5857ad1ec83a8_rand {$prefix}grid-style-1 {$prefix}hover-1 {$prefix}pb-border-top {$prefix}shortcode_biggrid'>";
+	$return_string .=		"<div id='{$prefix}uid_12_5857ad1ec83a8' class='{$prefix}block_inner'>";
+	$return_string .=			"<div class='{$prefix}big-grid-wrapper'>";
 
 	// The Loop for biggrid Square Image Template
 	if ( $bep_biggrid_square_big_query->have_posts() ) :
 		while ( $bep_biggrid_square_big_query->have_posts() ) : $bep_biggrid_square_big_query->the_post(); 
-			include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big_grid_square_big_template.php' );
+			include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big_grid_square_big_template_4.php' );
 			wp_reset_postdata();
 		endwhile;
 	endif;
@@ -97,7 +97,7 @@ function bep_biggrid( $bep_biggrid_square_shortcode_atts ) {
 	// The Loop for biggrid Horizontal Image Template
 	if ( $bep_biggrid_horizontal_query->have_posts() ) :
 		while ( $bep_biggrid_horizontal_query->have_posts() ) : $bep_biggrid_horizontal_query->the_post(); 
-			include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big_grid_square_horizontal_template.php' );
+			include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big_grid_square_horizontal_template_4.php' );
 			wp_reset_postdata();
 		endwhile;
 	endif;
@@ -105,7 +105,7 @@ function bep_biggrid( $bep_biggrid_square_shortcode_atts ) {
 	// The Loop for biggrid Small One Image Template
 	if ( $bep_biggrid_small_one_query->have_posts() ) :
 		while ( $bep_biggrid_small_one_query->have_posts() ) : $bep_biggrid_small_one_query->the_post(); 
-			include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big_grid_square_small_one_template.php' );
+			include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big_grid_square_small_one_template_4.php' );
 			wp_reset_postdata();
 		endwhile;
 	endif;
@@ -113,7 +113,7 @@ function bep_biggrid( $bep_biggrid_square_shortcode_atts ) {
 	// The Loop for biggrid Small Two Image Template
 	if ( $bep_biggrid_small_two_query->have_posts() ) :
 		while ( $bep_biggrid_small_two_query->have_posts() ) : $bep_biggrid_small_two_query->the_post(); 
-			include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big_grid_square_small_two_template.php' );
+			include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big_grid_square_small_two_template_4.php' );
 			wp_reset_postdata();
 		endwhile;
 	endif;
