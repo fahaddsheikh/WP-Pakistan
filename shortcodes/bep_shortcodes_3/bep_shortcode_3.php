@@ -4,27 +4,27 @@
 function bep_shortcode_3($bep_shortcode_3_attr) {
 	// Shortcode Attributes
 	$bep_shortcode_3_attr = shortcode_atts ( array(
-	'bep_shortcode_3_title'=>'Title',
-	'bep_shortcode_3_custom_post_type' =>  'post',
-	'bep_shortcode_3_number_of_posts' => '10',
-	'bep_shortcode_3_taxonomy_terms_name' => 'category',
-	'bep_shortcode_3_taxonomy_terms' => '',
+	'bep_title'=>'Title',
+	'bep_post_type' =>  'post',
+	'bep_total_post' => '10',
+	'bep_taxonomy_name' => 'category',
+	'bep_taxonomy_terms' => '',
 	),$bep_shortcode_3_attr, 'bep_shortcode_3');
 	
 	// If taxonomy terms are provided in the shortcode load them. Or load all posts from the provided or default taxonomy.
-	if (!empty($bep_shortcode_3_attr['bep_shortcode_3_taxonomy_terms'])) {
-		$bep_shortcode_3_terms_array = array_map('intval', explode(',', $bep_shortcode_3_attr['bep_shortcode_3_taxonomy_terms']));
+	if (!empty($bep_shortcode_3_attr['bep_taxonomy_terms'])) {
+		$bep_shortcode_3_terms_array = array_map('intval', explode(',', $bep_shortcode_3_attr['bep_taxonomy_terms']));
 	}
 	else {
-		$bep_shortcode_3_terms_array = get_terms( $bep_shortcode_3_attr['bep_shortcode_3_taxonomy_terms_name'], 'hide_empty=0&fields=ids' );
+		$bep_shortcode_3_terms_array = get_terms( $bep_shortcode_3_attr['bep_taxonomy_name'], 'hide_empty=0&fields=ids' );
 	}
 
 	$bep_shortcode_3_args = array(
-	'post_type' => $bep_shortcode_3_attr['bep_shortcode_3_custom_post_type'],
-	'posts_per_page' => intval($bep_shortcode_3_attr['bep_shortcode_3_number_of_posts']),
+	'post_type' => $bep_shortcode_3_attr['bep_post_type'],
+	'posts_per_page' => intval($bep_shortcode_3_attr['bep_total_post']),
 	'tax_query' => array(		
 			array(
-				'taxonomy' => $bep_shortcode_3_attr['bep_shortcode_3_taxonomy_terms_name'],
+				'taxonomy' => $bep_shortcode_3_attr['bep_taxonomy_name'],
 				'field'    => 'term_id',
 				'terms'    => $bep_shortcode_3_terms_array,
 			),
@@ -37,7 +37,7 @@ function bep_shortcode_3($bep_shortcode_3_attr) {
     $return_string .= "		<div class='{$prefix}block-title-wrap'>";
     $return_string .= "    	<h4 class='block-title'>";
     $return_string .= "	        <span style='margin-right: 0px;'>";
-    $return_string .=           $bep_shortcode_3_attr['bep_shortcode_3_title'];
+    $return_string .=           $bep_shortcode_3_attr['bep_title'];
     $return_string .= "      		 </span>";
     $return_string .= "   </h4>";
 	$return_string .= "</div>";

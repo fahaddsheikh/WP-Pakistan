@@ -5,7 +5,7 @@ function bep_trendingnow() {
     // Shortcode Attributes
     $bep_trendingnow_shortcode_atts = shortcode_atts(
         array(
-            'number_of_posts' => '5'
+            'bep_total_post' => '5'
         ),
         $bep_trendingnow_shortcode_atts, 'bep_trendingnow'
     );
@@ -13,8 +13,8 @@ function bep_trendingnow() {
     // The query arguments for Trending Now Template
     $bep_trendingnow_query_args = array(
         'post_type' => 'post',
-        'show_posts'      => $bep_trendingnow_shortcode_atts['number_of_posts'],
-        'posts_per_page'      => $bep_trendingnow_shortcode_atts['number_of_posts'],
+        'show_posts'      => $bep_trendingnow_shortcode_atts['bep_total_post'],
+        'posts_per_page'      => $bep_trendingnow_shortcode_atts['bep_total_post'],
         'post_status' => 'publish',
         'category_name' => 'trending-now'
     );

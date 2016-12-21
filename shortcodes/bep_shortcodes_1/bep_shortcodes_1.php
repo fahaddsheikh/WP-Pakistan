@@ -4,26 +4,26 @@
 function bep_shortcode_1($bep_shortcode_1_attr) {
 	// Shortcode Attributes
 	$bep_shortcode_1_attr = shortcode_atts ( array(
-	'bep_shortcode_1_title'=>'Title',
-	'bep_shortcode_1_custom_post_type' =>  'post',
-	'bep_shortcode_1_taxonomy_terms_name' => 'category',
-	'bep_shortcode_1_taxonomy_terms' => ''
+	'bep_title'=>'Title',
+	'bep_post_type' =>  'post',
+	'bep_taxonomy_name' => 'category',
+	'bep_taxonomy_terms' => ''
 	),$bep_shortcode_1_attr, 'bep_shortcode_1');
 	
 	// If taxonomy terms are provided in the shortcode load them. Or load all posts from the provided or default taxonomy.
 	if (!empty($bep_shortcode_3_attr['bep_shortcode_3_taxonomy_terms'])) {
-		$bep_shortcode_1_terms_array = array_map('intval', explode(',', $bep_shortcode_1_attr['bep_shortcode_1_taxonomy_terms']));;
+		$bep_shortcode_1_terms_array = array_map('intval', explode(',', $bep_shortcode_1_attr['bep_taxonomy_terms']));;
 	}
 	else {
-		$bep_shortcode_1_terms_array = get_terms( $bep_shortcode_1_attr['bep_shortcode_1_taxonomy_terms_name'], 'hide_empty=0&fields=ids' );
+		$bep_shortcode_1_terms_array = get_terms( $bep_shortcode_1_attr['bep_taxonomy_name'], 'hide_empty=0&fields=ids' );
 	}
 
 	$bep_shortcode_1_args_1 = array(
-	'post_type' => $bep_shortcode_1_attr['bep_shortcode_1_custom_post_type'],
+	'post_type' => $bep_shortcode_1_attr['bep_post_type'],
 	'posts_per_page' => 1,
 	'tax_query' => array(		
 			array(
-				'taxonomy' => $bep_shortcode_1_attr['bep_shortcode_1_taxonomy_terms_name'],
+				'taxonomy' => $bep_shortcode_1_attr['bep_taxonomy_name'],
 				'field'    => 'term_id',
 				'terms'    => $bep_shortcode_1_terms_array,
 			),
@@ -32,12 +32,12 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 	$bep_shortcode_1_query_1 = new WP_Query( $bep_shortcode_1_args_1 );
 
 	$bep_shortcode_1_args_2 = array(
-	'post_type' => $bep_shortcode_1_attr['bep_shortcode_1_custom_post_type'],
+	'post_type' => $bep_shortcode_1_attr['bep_post_type'],
 	'posts_per_page' => 8,
 	'offset' => 1,
 	'tax_query' => array(		
 			array(
-				'taxonomy' => $bep_shortcode_1_attr['bep_shortcode_1_taxonomy_terms_name'],
+				'taxonomy' => $bep_shortcode_1_attr['bep_taxonomy_name'],
 				'field'    => 'term_id',
 				'terms'    => $bep_shortcode_1_terms_array,
 			),
@@ -46,7 +46,7 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 	$bep_shortcode_1_query_2 = new WP_Query( $bep_shortcode_1_args_2 );
 	$prefix = "bep_";
 	$return_string ="<div class='{$prefix}block_wrap {$prefix}block_1 {$prefix}pb-border-top red-block {$prefix}shortcode_1'>";
-	$return_string.=	"<div class='bep-block-title-wrap'><h4 class='block-title'><span style='margin-right: 0px;'>".$bep_shortcode_1_attr['bep_shortcode_1_title']."</span></h4>";
+	$return_string.=	"<div class='bep-block-title-wrap'><h4 class='block-title'><span style='margin-right: 0px;'>".$bep_shortcode_1_attr['bep_title']."</span></h4>";
 	$return_string.="</div>";
 	$return_string.="<div class='{$prefix}block_inner'>";
 	$return_string.=	"<div class='{$prefix}block-row'>";

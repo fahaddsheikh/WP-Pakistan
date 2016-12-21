@@ -4,8 +4,8 @@
 function bep_shortcode_events($bep_shortcode_events_attr) {
 	// Shortcode Attributes
 	$bep_shortcode_events_attr = shortcode_atts ( array(
-	'bep_shortcode_events_title'=>'Upcomming Events',
-	'bep_shortcode_events_number' =>  '10'
+	'bep_title'=>'Upcomming Events',
+	'bep_total_post' =>  '10'
 	),$bep_shortcode_events_attr, 'bep_shortcode_events');
 	
 	$bep_shortcode_events_args = array(
@@ -13,7 +13,7 @@ function bep_shortcode_events($bep_shortcode_events_attr) {
         'orderby' => 'meta_value', // We want to organize the events by date    
         'meta_key' => 'be_event_datefrom', // Grab the "start date" field created via "More Fields" plugin (stored in YYYY-MM-DD format)
         'order' => 'ASC', // ASC is the other option    
-	    'posts_per_page' => $bep_shortcode_events_attr['bep_shortcode_events_number'], // Let's show them all.   
+	    'posts_per_page' => $bep_shortcode_events_attr['bep_total_post'], // Let's show them all.   
         'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
             array(
                 'key' => 'be_event_datefrom', // Check the start date field
@@ -27,7 +27,7 @@ function bep_shortcode_events($bep_shortcode_events_attr) {
 	$bep_shortcode_events_query = new WP_Query( $bep_shortcode_events_args );
 	$prefix = "bep_";
 	$return_string ="<div class='{$prefix}block_wrap {$prefix}block_1 {$prefix}pb-border-top red-block {$prefix}shortcode_events'>";
-	$return_string.=	"<div class='bep-block-title-wrap'><h4 class='block-title'><span style='margin-right: 0px;'>".$bep_shortcode_events_attr['bep_shortcode_events_title']."</span></h4>";
+	$return_string.=	"<div class='bep-block-title-wrap'><h4 class='block-title'><span style='margin-right: 0px;'>".$bep_shortcode_events_attr['bep_title']."</span></h4>";
 	$return_string.="</div>";
 	$return_string.="<div class='{$prefix}block_inner'>";
 	$return_string.=	"<div class='{$prefix}block-row'>";
