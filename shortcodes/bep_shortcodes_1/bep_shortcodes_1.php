@@ -11,7 +11,7 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 	),$bep_shortcode_1_attr, 'bep_shortcode_1');
 	
 	// If taxonomy terms are provided in the shortcode load them. Or load all posts from the provided or default taxonomy.
-	if (!empty($bep_shortcode_3_attr['bep_shortcode_3_taxonomy_terms'])) {
+	if (!empty($bep_shortcode_1_attr['bep_taxonomy_terms'])) {
 		$bep_shortcode_1_terms_array = array_map('intval', explode(',', $bep_shortcode_1_attr['bep_taxonomy_terms']));;
 	}
 	else {

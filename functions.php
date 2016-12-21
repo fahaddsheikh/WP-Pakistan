@@ -36,6 +36,8 @@ function overrite_customposttype_slugs() {
 	$args->rewrite["slug"] = "businesses";
 	register_post_type($args->name, $args);
 
+	register_taxonomy_for_object_type( 'ait-locations', 'post' );
+
 }
 add_action( 'init', 'overrite_customposttype_slugs' );
 

@@ -4,6 +4,11 @@ Your custom style
 Add your custom styles in this file so it is easier to update the theme.
 */
 
+/* General CSS */
+
+.elm-main {
+	padding:0;
+}
 
 /* Header CSS */
 .main-nav {
@@ -86,6 +91,7 @@ Add your custom styles in this file so it is easier to update the theme.
 /* Search CSS */
 
 .bep-search {
-    margin-right: -30%;
-    margin-left: -30%;
+    	margin-right: -30%;
+    	margin-left: -30%;
+	margin-bottom:30px;
 }

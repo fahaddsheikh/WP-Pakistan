@@ -21,8 +21,7 @@ function bep_shortcode_reviews($bep_shortcode_reviews_attr) {
 
 
 	$return_string ="<div class='{$prefix}block_wrap {$prefix}block_1 {$prefix}pb-border-top red-block {$prefix}shortcode_reviews'>";
-	$return_string.=	"<div class='bep-block-title-wrap'><h4 class='block-title'><span style='margin-right: 0px;'>".$bep_shortcode_reviews_attr['bep_title']."</span></h4>";
-	$return_string.="</div>";
+	$return_string.=	"<div class='bep-block-title-wrap'><h4 class='block-title'><span style='margin-right: 0px;'>".$bep_shortcode_reviews_attr['bep_title']."</span></h4></div>";
 	$return_string.="<div class='{$prefix}block_inner'>";
 	$return_string.=	"<div class='{$prefix}block-row'>";
 	$return_string.=		"<div class='{$prefix}review-template'>";
@@ -89,9 +88,9 @@ function bep_shortcode_reviews($bep_shortcode_reviews_attr) {
 /*	$return_string.="<div class='{$prefix}next-prev-wrap'>";
 	$return_string.= "<a href='#' class='{$prefix}ajax-prev-page ajax-page-disabled'><i class='{$prefix}icon-font {$prefix}icon-menu-left'></i></a><a href='#'' class='bep-ajax-next-page'><i class='{$prefix}icon-font {$prefix}icon-menu-right'></i>";
 	$return_string.=	"</a>";
-	$return_string.=	"</div>";*/
+	$return_string.=	"</div>";
 
-	$return_string.="</div>";
+	$return_string.="</div>";*/
 
 	wp_reset_query();
    	return $return_string;
