@@ -66,28 +66,6 @@ Add your custom styles in this file so it is easier to update the theme.
     padding:0;
 }
 
-/* Reviews Shortcode */
-
-.reviews-container .review-stars .review-ratings:before {
-    content: "";
-    position: absolute;
-    top: -13px;
-    left: 5px;
-    border-left: 16px solid #434343;
-    border-top: 13px solid transparent;
-    border-right:0;
-}
-
-.reviews-container .review-stars .review-ratings {
-    float:left;
-    left: 0;
-}
-
-.reviews-container .review-stars .review-ratings .review-rating-stars , .bep_module_wrap .bep_review-rating .review-stars  {
-    color: #39843F;
-}
-
-
 /* Search CSS */
 
 .bep-search {

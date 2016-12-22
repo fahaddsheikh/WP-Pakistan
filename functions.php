@@ -8,6 +8,25 @@
 include( get_stylesheet_directory() . '/shortcodes/bep_shortcodes-core.php' );
 include( get_stylesheet_directory() . '/profile-module/be_profile_core.php' );
 
+
+
+/*function unregister_unused_post_types() {
+	unregister_post_type( 'ait-job-offer' );
+	unregister_post_type( 'ait-member' );
+	unregister_post_type( 'ait-partner' );
+	unregister_post_type( 'ait-event' );
+	unregister_post_type( 'ait-service-box' );
+	unregister_post_type( 'ait-price-table' );
+	unregister_post_type( 'ait-portfolio-item' );
+	unregister_post_type( 'ait-toggle' );
+	unregister_post_type( 'ait-testimonial' );
+	unregister_post_type( 'ait-faq' );
+	unregister_post_type( 'ait-ad-space' );
+}
+add_action('init','unregister_unused_post_types');*/
+
+
+
 function bep_custom_includes() {
     wp_enqueue_script( 'bep-custom-javascript', get_stylesheet_directory_uri() . '/js/bep-custom-javascript.js', true );
 }
@@ -51,3 +70,11 @@ function add_slug_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'add_slug_body_class' );
+
+function bep_set_max_posts_archive_layouts( $query ){
+    if ($query->is_post_type_archive( 'ait-review' ) && $query->is_main_query() ){
+            $query->set( 'posts_per_page', 20 );
+    }
+}
+add_action( 'pre_get_posts', 'bep_set_max_posts_archive_layouts' );
+

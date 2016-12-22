@@ -37,7 +37,7 @@ function be_custom_post_type_init() {
     $args = array(
         'public' => true,
         'label'  => 'Profiles',
-        'has_archive' => false,
+        'has_archive' => true,
         'supports' => array( // here we specify what the taxonomy supports
             'title',
             'editor',

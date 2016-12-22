@@ -816,6 +816,31 @@ body .bep_animation-stack-type0 .bep_animation-stack img, body .bep_animation-st
 /* Style Events CSS Ends */
 
 /* Style Reviews CSS Ends */
+
+.bep_review {
+    max-width:400px;
+    float:left;
+}
+
+.reviews-container .review-stars .review-ratings:before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 5px;
+    border-left: 16px solid #434343;
+    border-top: 13px solid transparent;
+    border-right:0;
+}
+
+.reviews-container .review-stars .review-ratings {
+    float:left;
+    left: 0;
+}
+
+.reviews-container .review-stars .review-ratings .review-rating-stars , .bep_module_wrap .bep_review-rating .review-stars  {
+    color: #39843F;
+}
+
 .bep_shortcode_reviews .block-title {
     font-family: 'Open Sans Condensed';
     font-size: 14px;
