@@ -9,8 +9,11 @@ include( get_stylesheet_directory() . '/shortcodes/bep_shortcodes-core.php' );
 include( get_stylesheet_directory() . '/profile-module/be_profile_core.php' );
 
 
+//Add Theme Support
 
-/*function unregister_unused_post_types() {
+add_theme_support( 'html5', array( 'search-form' ) );
+
+function unregister_unused_post_types() {
 	unregister_post_type( 'ait-job-offer' );
 	unregister_post_type( 'ait-member' );
 	unregister_post_type( 'ait-partner' );
@@ -23,7 +26,7 @@ include( get_stylesheet_directory() . '/profile-module/be_profile_core.php' );
 	unregister_post_type( 'ait-faq' );
 	unregister_post_type( 'ait-ad-space' );
 }
-add_action('init','unregister_unused_post_types');*/
+add_action('init','unregister_unused_post_types');
 
 
 
@@ -55,6 +58,10 @@ function overrite_customposttype_slugs() {
 	$args->rewrite["slug"] = "businesses";
 	register_post_type($args->name, $args);
 
+	$args = get_post_type_object("profile");
+	$args->rewrite["slug"] = "profiles";
+	register_post_type($args->name, $args);
+
 	register_taxonomy_for_object_type( 'ait-locations', 'post' );
 
 }
@@ -72,9 +79,9 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 function bep_set_max_posts_archive_layouts( $query ){
-    if ($query->is_post_type_archive( 'ait-review' ) && $query->is_main_query() ){
-            $query->set( 'posts_per_page', 20 );
+    if ($query->is_post_type_archive( array( 'ait-review' , 'ait-item' , 'profile') ) && $query->is_main_query() ){
+            $query->set( 'posts_per_page', 10 );
     }
 }
-add_action( 'pre_get_posts', 'bep_set_max_posts_archive_layouts' );
+add_action( 'pre_get_posts', 'bep_set_max_posts_archive_layouts', 100 , 2);
 

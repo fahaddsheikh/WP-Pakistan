@@ -822,6 +822,27 @@ body .bep_animation-stack-type0 .bep_animation-stack img, body .bep_animation-st
     float:left;
 }
 
+.archive-container {
+    margin-right:-24px;
+    margin-left:-24px;
+}
+
+.archive-container .bep_review {
+    max-width: 400px;
+    float: left;
+    margin: 0 24px;
+    width: 43%;
+    height: 120px;
+}
+
+.archive-container .bep_module-thumb {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.bep_archive nav.nav-single.nav-below {
+    margin:20px 0;
+}
+
 .reviews-container .review-stars .review-ratings:before {
     content: "";
     position: absolute;

@@ -9,11 +9,13 @@
 //Include ALL PHP Shortcode Details
 
 include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big-grid-shortcode.php' );
+include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big-grid_single_shortcode.php' );
 include( get_stylesheet_directory() . '/shortcodes/bep_trendingnow/bep_trendingnow-shortcode.php' );
 include( get_stylesheet_directory() .'/shortcodes/bep_shortcodes_1/bep_shortcodes_1.php');
 include( get_stylesheet_directory() .'/shortcodes/bep_shortcodes_3/bep_shortcode_3.php');
 include( get_stylesheet_directory() .'/shortcodes/bep_latest_reviews/bep_reviews-shortcode.php');
 include( get_stylesheet_directory() .'/shortcodes/bep_latest_events/bep_events-shortcode.php');
+
 
 /* 
 *

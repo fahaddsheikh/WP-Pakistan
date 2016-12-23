@@ -6,7 +6,7 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 	$bep_shortcode_1_attr = shortcode_atts ( array(
 	'bep_title'=>'Title',
 	'bep_post_type' =>  'post',
-	'bep_taxonomy_name' => 'category',
+	'bep_taxonomy_name' => '',
 	'bep_taxonomy_terms' => ''
 	),$bep_shortcode_1_attr, 'bep_shortcode_1');
 	
@@ -19,30 +19,35 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 	}
 
 	$bep_shortcode_1_args_1 = array(
-	'post_type' => $bep_shortcode_1_attr['bep_post_type'],
-	'posts_per_page' => 1,
-	'tax_query' => array(		
-			array(
-				'taxonomy' => $bep_shortcode_1_attr['bep_taxonomy_name'],
-				'field'    => 'term_id',
-				'terms'    => $bep_shortcode_1_terms_array,
-			),
-		),
+		'post_type' => $bep_shortcode_1_attr['bep_post_type'],
+		'posts_per_page' => 1,
 	);
+
 	$bep_shortcode_1_query_1 = new WP_Query( $bep_shortcode_1_args_1 );
 
 	$bep_shortcode_1_args_2 = array(
-	'post_type' => $bep_shortcode_1_attr['bep_post_type'],
-	'posts_per_page' => 8,
-	'offset' => 1,
-	'tax_query' => array(		
-			array(
-				'taxonomy' => $bep_shortcode_1_attr['bep_taxonomy_name'],
-				'field'    => 'term_id',
-				'terms'    => $bep_shortcode_1_terms_array,
-			),
-		),
+		'post_type' => $bep_shortcode_1_attr['bep_post_type'],
+		'posts_per_page' => 8,
+		'offset' => 1,
 	);
+
+	if (!empty([$bep_shortcode_1_attr['bep_taxonomy_name']])) {
+		$bep_shortcode_1_args_1[] = array (
+			'tax_query' => array (		
+					'taxonomy' => $bep_shortcode_1_attr['bep_taxonomy_name'],
+					'field'    => 'term_id',
+					'terms'    => $bep_shortcode_1_terms_array,
+				)
+		);
+		$bep_shortcode_1_args_2[] = array (
+			'tax_query' => array (		
+					'taxonomy' => $bep_shortcode_1_attr['bep_taxonomy_name'],
+					'field'    => 'term_id',
+					'terms'    => $bep_shortcode_1_terms_array,
+				)
+		);
+	}
+
 	$bep_shortcode_1_query_2 = new WP_Query( $bep_shortcode_1_args_2 );
 	$prefix = "bep_";
 	$return_string ="<div class='{$prefix}block_wrap {$prefix}block_1 {$prefix}pb-border-top red-block {$prefix}shortcode_1'>";
