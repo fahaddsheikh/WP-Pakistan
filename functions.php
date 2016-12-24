@@ -63,9 +63,10 @@ function overrite_customposttype_slugs() {
 	register_post_type($args->name, $args);
 
 	register_taxonomy_for_object_type( 'ait-locations', 'post' );
+	register_taxonomy_for_object_type( 'ait-locations', 'profile' );
 
 }
-add_action( 'init', 'overrite_customposttype_slugs' );
+add_action( 'init', 'overrite_customposttype_slugs' ,0 ,1);
 
 //Page Slug Body Class
 
@@ -84,4 +85,26 @@ function bep_set_max_posts_archive_layouts( $query ){
     }
 }
 add_action( 'pre_get_posts', 'bep_set_max_posts_archive_layouts', 100 , 2);
+
+// Handle the post_type parameter given in get_terms function
+function df_terms_clauses($clauses, $taxonomy, $args) {
+	if (!empty($args['post_type']))	{
+		global $wpdb;
+
+		$post_types = array();
+
+		foreach($args['post_type'] as $cpt)	{
+			$post_types[] = "'".$cpt."'";
+		}
+
+	    if(!empty($post_types))	{
+			$clauses['fields'] = 'DISTINCT '.str_replace('tt.*', 'tt.term_taxonomy_id, tt.term_id, tt.taxonomy, tt.description, tt.parent', $clauses['fields']).', COUNT(t.term_id) AS count';
+			$clauses['join'] .= ' INNER JOIN '.$wpdb->term_relationships.' AS r ON r.term_taxonomy_id = tt.term_taxonomy_id INNER JOIN '.$wpdb->posts.' AS p ON p.ID = r.object_id';
+			$clauses['where'] .= ' AND p.post_type IN ('.implode(',', $post_types).')';
+			$clauses['orderby'] = 'GROUP BY t.term_id '.$clauses['orderby'];
+		}
+    }
+    return $clauses;
+}
+add_filter('terms_clauses', 'df_terms_clauses', 10, 3);
 

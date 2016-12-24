@@ -82,6 +82,26 @@ Add your custom styles in this file so it is easier to update the theme.
 
 /* Custom Search */
 
-.bep_custom-search-form input["text"] {
+.bep_archive #bep_custom-search-form * {
+    margin:0 10px;
+}
+
+.bep_archive #bep_custom-search-form .search-wrap {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.bep_archive #bep_custom-search-form .search-wrap input {
+    border-bottom: 2px solid rgba(0,0,0,0.1) !important;
+}
+
+.bep_archive #bep_custom-search-form .search-wrap input[type="search"] {
     width:100%;
+}
+
+.bep_archive #bep_custom-search-form .sbHolder {
+    width:30%;
 }

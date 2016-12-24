@@ -18,7 +18,7 @@
 			<?php if ($current_posttype['post_type'] !== 'ait-review') { ?>
 				<section id="elm-text-_e6b34f6cfb915-main" class="elm-main elm-text-main  load-finished">
 					<div class="elm-wrapper elm-text-wrapper">
-						<?php get_search_form(); ?>
+						<?php get_template_part( 'bep-custom-searchform' ); ?>
 					</div>
 				</section>
 			<?php } ?>

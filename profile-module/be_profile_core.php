@@ -43,7 +43,6 @@ function be_custom_post_type_init() {
             'editor',
             'thumbnail'
         ),
-        'taxonomies' => array( 'ait-items' , 'ait-locations' ),
         'publicly_queryable' => true,
     );
     register_post_type( 'profile', $args );
@@ -74,7 +73,7 @@ function be_custom_post_type_init() {
 
     register_taxonomy( 'profile-type', array( 'profile' ), $args );
 }
-add_action('init', 'be_custom_post_type_init');
+add_action('init', 'be_custom_post_type_init', 10);
 
 //Mailer
 
