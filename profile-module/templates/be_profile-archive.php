@@ -5,12 +5,19 @@
 				<div class="elm-wrapper elm-text-wrapper">
 				<?php
 				$current_posttype = $wp_query->query;
-				$shortcode = sprintf(
-					    '[bep_biggrid_single bep_post_type="%1$s"]',
+				$shortcode_businesses = sprintf(
+					    '[bep_biggrid_single bep_post_type="%1$s" bep_taxonomy_type="ait-locations"]',
 					    $current_posttype['post_type']
 					);
-				if ($current_posttype['post_type'] !== 'ait-review') {
-					echo do_shortcode( $shortcode );
+				$shortcode_profile = sprintf(
+					    '[bep_biggrid_single bep_post_type="%1$s" bep_taxonomy_type="profile-type"]',
+					    $current_posttype['post_type']
+					);
+				if ($current_posttype['post_type'] == 'ait-item') {
+					echo do_shortcode( $shortcode_businesses );
+				}
+				elseif ($current_posttype['post_type'] == 'profile') {
+					echo do_shortcode( $shortcode_profile );
 				}
 				?>
 				</div>

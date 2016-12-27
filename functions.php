@@ -66,7 +66,7 @@ function overrite_customposttype_slugs() {
 	register_taxonomy_for_object_type( 'ait-locations', 'profile' );
 
 }
-add_action( 'init', 'overrite_customposttype_slugs' ,0 ,1);
+add_action( 'init', 'overrite_customposttype_slugs');
 
 //Page Slug Body Class
 

@@ -5,7 +5,8 @@ function bep_biggrid_single( $bep_biggrid_single_shortcode_atts) {
 	// Shortcode Attributes
 	$bep_biggrid_single_shortcode_atts = shortcode_atts(
 		array(
-			'bep_post_type' => 'post'
+			'bep_post_type' => 'post',
+			'bep_taxonomy_type' => 'category'
 		),
 		$bep_biggrid_single_shortcode_atts, 'bep_biggrid_single'
 	);
@@ -14,7 +15,14 @@ function bep_biggrid_single( $bep_biggrid_single_shortcode_atts) {
 	$bep_biggrid_single_big_query_args = array(
 		'post_type' => $bep_biggrid_single_shortcode_atts['bep_post_type'],
 		'posts_per_page'      => 4,
-		'post_status' => 'publish'
+		'post_status' => 'publish',
+		'tax_query' => array(
+			array(
+				'taxonomy' => $bep_biggrid_single_shortcode_atts['bep_taxonomy_type'],
+				'field'    => 'slug',
+				'terms'    => 'featured',
+			),
+		),
 	);
 
 	$bep_biggrid_single_big_query = new WP_Query( $bep_biggrid_single_big_query_args );
