@@ -2,7 +2,7 @@
 	$return_string .=	"<div class='{$prefix}module_mx6 {$prefix}animation-stack {$prefix}big-grid-post-2 {$prefix}big-grid-post {$prefix}small-thumb'>	";
 	$return_string .=		"<div class='{$prefix}module-thumb'>	";
 	$return_string .=			"<a href='" . get_permalink() . "' rel='bookmark' title='" . get_the_title() . "'>	";
-	$return_string .=				 get_the_post_thumbnail( get_the_id() ,  'biggrid-small' );
+	$return_string .=				 get_the_post_thumbnail( get_the_id() ,  'bep_324x235' );
 	$return_string .=			"</a>";
 	$return_string .=		"</div>";
 	$return_string .=		"<div class='{$prefix}meta-info-container'>	";

@@ -2,7 +2,7 @@
 $return_string.="<div class='{$prefix}module_10 {$prefix}module_wrap {$prefix}animation-stack'>";
 $return_string.="	<div class='{$prefix}module-thumb'>";
 $return_string.="		<a href='" . get_permalink() . "' rel='bookmark' title='".get_the_title()."'>";
-$return_string.=				 get_the_post_thumbnail( get_the_id() ,  'bep_shortcodes_3' );
+$return_string.=				 get_the_post_thumbnail( get_the_id() ,  'bep_324x235' );
 $return_string.="		</a>";
 $return_string.="	</div>";
 $return_string.="	<div class='item-details'>";

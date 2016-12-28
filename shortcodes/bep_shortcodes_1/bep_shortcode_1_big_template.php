@@ -4,7 +4,7 @@ $return_string.='<div class="bep_module_4 bep_module_wrap bep_animation-stack">'
 $return_string.='	<div class="bep_module-image">';
 $return_string.='		<div class="bep_module-thumb">';
 $return_string.='			<a href="' . get_permalink() . '" rel="bookmark" title="'.get_the_title().'">';
-$return_string.=				 get_the_post_thumbnail( get_the_id() ,  'bep_shortcodes_1-big' );
+$return_string.=				 get_the_post_thumbnail( get_the_id() ,  'bep_324x235' );
 $return_string.='			</a>';
 $return_string.='		</div>';
 								$bep_selectedtype = get_post_meta( get_the_id(), 'bep_type', true );

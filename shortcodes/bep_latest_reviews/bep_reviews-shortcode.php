@@ -31,7 +31,7 @@ function bep_shortcode_reviews($bep_shortcode_reviews_attr) {
 	$return_string.=						"<div class='bep_module_6 bep_module_wrap {$prefix}review reviews-container ratings-shown reviews-ajax-shown'>";
 	$return_string.=							"<div class='{$prefix}module-thumb'>";
 	$return_string.=								"<a href='" . get_permalink(get_post_meta(get_the_id(), 'post_id', true)) . "' rel='bookmark' title='".get_the_title(get_post_meta(get_the_id(), 'post_id', true))."'>";
-	$return_string.=				 				get_the_post_thumbnail( get_post_meta(get_the_id(), 'post_id', true) ,  'bep_shortcodes_1-small' );
+	$return_string.=				 				get_the_post_thumbnail( get_post_meta(get_the_id(), 'post_id', true) ,  'bep_100x70' );
 	$return_string.=								"</a>";
 	$return_string.=							"</div>";
 	$return_string.=							"<div class='item-details'>";

@@ -3,7 +3,7 @@
 $return_string .=	"<div class='{$prefix}module_mx5 {$prefix}animation-stack {$prefix}big-grid-post-0 {$prefix}big-grid-post {$prefix}big-thumb'>";
 $return_string .=		"<div class='{$prefix}module-thumb'>";
 $return_string .=			"<a href='" . get_permalink() . "' rel='bookmark' title='" . get_the_title() . "'>";
-$return_string .=				 get_the_post_thumbnail( get_the_id() ,  'biggrid-large-square' );
+$return_string .=				 get_the_post_thumbnail( get_the_id() ,  'bep_649x500' );
 $return_string .=			"</a>";
 $return_string .=		"</div>";           
 $return_string .=		"<div class='{$prefix}meta-info-container'>";

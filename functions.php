@@ -11,8 +11,6 @@ include( get_stylesheet_directory() . '/profile-module/be_profile_core.php' );
 
 //Add Theme Support
 
-add_theme_support( 'html5', array( 'search-form' ) );
-
 function unregister_unused_post_types() {
 	unregister_post_type( 'ait-job-offer' );
 	unregister_post_type( 'ait-member' );

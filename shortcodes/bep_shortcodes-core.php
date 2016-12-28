@@ -24,16 +24,9 @@ include( get_stylesheet_directory() .'/shortcodes/bep_latest_events/bep_events-s
 */
 
 // BIGGRID 
-add_image_size( 'biggrid-large-square', 649, 500, array( 'center', 'top' ) );
-add_image_size( 'biggrid-horizontal', 644, 297, array( 'center', 'top' ) );
-add_image_size( 'biggrid-small', 322, 200, array( 'center', 'top' ) );
-
-// Shortcode 1 Image Sizes
-add_image_size( 'bep_shortcodes_1-big', 324, 235, array( 'center', 'top' ) );
-add_image_size( 'bep_shortcodes_1-small', 100, 70, array( 'center', 'top' ) );
-
-// Shortcode 3 Image Sizes
-add_image_size( 'bep_shortcodes_3', 218,150, array( 'center', 'top' ) );
+add_image_size( 'bep_649x500', 649, 500, array( 'center', 'top' ) ); // for biggrid-large-square and biggrid-horizontal
+add_image_size( 'bep_324x235', 324, 235, array( 'center', 'top' ) ); // for biggrid-small, bep_shortcodes_1-big and bep_shortcodes_3
+add_image_size( 'bep_100x70', 100, 70, array( 'center', 'top' ) ); // for bep_shortcodes_1-small
 
 
 
@@ -55,7 +48,7 @@ add_action( 'wp_enqueue_scripts', 'bep_include_shortcode_styles' );
 
 function bep_register_meta_boxes() {
     add_meta_box( 'bep_metaboxes', __( 'Type', 'textdomain' ), 'bep_type_box_content_callback' );
-    add_meta_box( 'bep_metaboxes', __( 'BEP Event Date', 'textdomain' ), 'be_event_datefrom_content_callback', 'ait-event-pro' );
+    add_meta_box( ' ', __( 'BEP Event Date', 'textdomain' ), 'be_event_datefrom_content_callback', 'ait-event-pro' );
 }
 add_action( 'add_meta_boxes', 'bep_register_meta_boxes' );
 
