@@ -42,7 +42,7 @@
 								 						<div class='bep_module_6 bep_module_wrap bep_review reviews-container ratings-shown reviews-ajax-shown'>
 								 							<div class='bep_module-thumb'>
 								 								<a href='<?php echo get_permalink(get_post_meta(get_the_id(), 'post_id', true)) ?>' rel='bookmark' title='<?php echo get_the_title(get_post_meta(get_the_id(), 'post_id', true)) ?>'>
-								 				 					<?php echo get_the_post_thumbnail( get_post_meta(get_the_id(), 'post_id', true) ,  'bep_shortcodes_1-small' ) ?>
+								 				 					<?php echo get_the_post_thumbnail( get_post_meta(get_the_id(), 'post_id', true) ,  'bep_100x70' ) ?>
 								 								</a>
 								 							</div>
 								 							<div class='item-details'>

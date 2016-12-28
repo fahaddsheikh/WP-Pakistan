@@ -454,6 +454,11 @@ h3 {
     margin-left: 244px;
     min-height: 150px;
 }
+
+.bep_module_10 .bep_module-thumb a img {
+    max-width: 218px;
+}
+
 .bep_module_wrap .entry-title {
     font-weight: 500;
 }
