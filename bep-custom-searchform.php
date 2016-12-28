@@ -33,7 +33,25 @@ function bep_categories_out($categories, $post_type) {
 	        elseif ($current_posttype['post_type'] == 'ait-item') {
 	        	bep_categories_out('ait-items', $current_posttype);
 	        	bep_categories_out('ait-locations', $current_posttype);
-       			echo "<input type='hidden' name='a' value='true'>";
+       			echo "<input type='hidden' name='a' value='true'>"; 
+       			echo "<div class='radius '>";
+				echo 	"<div class='radius-toggle radius-input-visible'>Radius: Off</div>";
+				echo 		"<input type='hidden' name='lat' value='' id='latitude-search' class='latitude-search' disabled=''>";
+				echo 		"<input type='hidden' name='lon' value='' id='longitude-search' class='longitude-search' disabled=''>";
+				echo 		"<input type='hidden' name='runits' value='km' disabled=''>";
+				echo 		"<input type='hidden' name='runits' value='km' disabled=''>";
+				echo	"<div class='radius-display radius-input-hidden'>";
+				echo 		"<span class='radius-clear'><i class='fa fa-times'></i></span>";
+				echo 		"<span class='radius-text'>Radius:</span>";
+				echo 	"</div>";
+				echo 	"<div class='radius-popup-container radius-input-hidden'>";
+				echo 		"<span class='radius-popup-close'><i class='fa fa-times'></i></span>";
+				echo 		"<span class='radius-value'></span>";
+				echo 		"<span class='radius-units'>km</span>";
+				echo 		"<input type='range' name='rad' class='radius-search' value='0.1' min='0.1' step='0.1' max='100' disabled=''>";
+				echo 		"<span class='radius-popup-help'>Set radius for geolocation</span>";
+				echo 	"</div>";
+				echo  "</div>";
 	        } 
         ?>
         <input class="screen-reader-text" type="submit" id="search-submit" value="Search" />
