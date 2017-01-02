@@ -5,7 +5,9 @@ function bep_shortcode_events($bep_shortcode_events_attr) {
 	// Shortcode Attributes
 	$bep_shortcode_events_attr = shortcode_atts ( array(
 	'bep_title'=>'Upcomming Events',
-	'bep_total_post' =>  '10'
+	'bep_total_post' =>  '10',
+	'bep_taxonomy_name' => '',
+	'bep_taxonomy_terms' => ''
 	),$bep_shortcode_events_attr, 'bep_shortcode_events');
 	
 	$bep_shortcode_events_args = array(
@@ -21,10 +23,21 @@ function bep_shortcode_events($bep_shortcode_events_attr) {
                 'compare' => '>=', // Return the ones greater than today's date
                 'type' => 'NUMERIC,' // Let WordPress know we're working with numbers
             )
-        ),
+        )
     );
 
+	if (!empty([$bep_shortcode_events_attr['bep_taxonomy_name']])) {
+		$bep_shortcode_1_args_1[] = array (
+			'tax_query' => array (		
+					'taxonomy' => $bep_shortcode_events_attr['bep_taxonomy_name'],
+					'field'    => 'term_id',
+					'terms'    => $bep_shortcode_1_terms_array,
+				)
+		);
+	}
+
 	$bep_shortcode_events_query = new WP_Query( $bep_shortcode_events_args );
+
 	$prefix = "bep_";
 	$return_string ="<div class='{$prefix}block_wrap {$prefix}block_1 {$prefix}pb-border-top red-block {$prefix}shortcode_events'>";
 	$return_string.=	"<div class='bep-block-title-wrap'><h4 class='block-title'><span style='margin-right: 0px;'>".$bep_shortcode_events_attr['bep_title']."</span></h4>";

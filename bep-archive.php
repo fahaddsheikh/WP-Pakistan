@@ -6,7 +6,7 @@
 				<?php
 				$current_posttype = $wp_query->query;
 				$shortcode_businesses = sprintf(
-					    '[bep_biggrid_single bep_post_type="%1$s" bep_taxonomy_type="ait-locations"]',
+					    '[bep_biggrid_single bep_post_type="%1$s" bep_taxonomy_type="ait-items"]',
 					    $current_posttype['post_type']
 					);
 				$shortcode_profile = sprintf(

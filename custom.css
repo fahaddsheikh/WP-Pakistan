@@ -75,12 +75,20 @@ Add your custom styles in this file so it is easier to update the theme.
 /* AIT Search */
 
 .bep-search {
-    margin-right: -30%;
-    margin-left: -30%;
+    margin-right: -100%;
+    margin-left: -100%;
 	margin-bottom:30px;
+    background-color: #4e4e4e;
 }
 
 /* Custom Search */
+
+
+.bep_archive #bep_custom-search-form  {
+    padding: 20px 0;
+    max-width: 1300px;
+    margin: auto;
+}
 
 .bep_archive #bep_custom-search-form * {
     margin:0 10px;
@@ -95,36 +103,50 @@ Add your custom styles in this file so it is easier to update the theme.
 }
 
 .bep_archive #bep_custom-search-form .search-wrap input {
-    border-bottom: 2px solid rgba(0,0,0,0.1) !important;
+    border: 2px solid rgba(0,0,0,0.1) !important;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
 .bep_archive #bep_custom-search-form .search-wrap input[type="search"] {
     width:100%;
+    border-radius: 5px;
+}
+
+.bep_archive #bep_custom-search-form .search-wrap input[type="submit"] {
+    border: 2px solid #39843f !important;
+    background-color: #39843f;
+    color: #fff;
+    border-radius: 5px;
 }
 
 .bep_archive #bep_custom-search-form .sbHolder {
-    width:30%;
+    width: 30%;
+    background-color: #fff;
+    height: 40px;
+    border-radius:5px;
 }
 
-#bep_custom-search-form .radius {
-    float: right;
-}
-
-#bep_custom-search-form .radius {
+.bep_archive #bep_custom-search-form .radius {
+    background-color: #39843f;
+    padding: 0 10px;
+    box-sizing: border-box;
     text-align: center;
     position: relative;
     cursor: pointer;
+    float: right;
+    border-radius:5px;
 }
 
-#bep_custom-search-form .radius-toggle, #bep_custom-search-form .radius-display {
+.bep_archive #bep_custom-search-form .radius-toggle, #bep_custom-search-form .radius-display {
     font-size: 0;
 }
 
-#bep_custom-search-form .radius-display.radius-input-visible {
+.bep_archive #bep_custom-search-form .radius-display.radius-input-visible {
     border-radius: 6px;
 }
 
-#bep_custom-search-form .radius-clear {
+.bep_archive #bep_custom-search-form .radius-clear {
     background: #fff;
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
@@ -144,17 +166,17 @@ Add your custom styles in this file so it is easier to update the theme.
     z-index: 1;
 }
 
-#bep_custom-search-form .radius-clear .fa {
+.bep_archive #bep_custom-search-form .radius-clear .fa {
     font-size: 10px;
     line-height: 14px;
 }
 
-#bep_custom-search-form .radius-popup-container.radius-input-visible {
+.bep_archive #bep_custom-search-form .radius-popup-container.radius-input-visible {
     margin-top: 0;
     opacity: 1;
 }
 
-#bep_custom-search-form .radius-popup-container {
+.bep_archive #bep_custom-search-form .radius-popup-container {
     width: 200px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -181,11 +203,11 @@ Add your custom styles in this file so it is easier to update the theme.
     transition: opacity 0.2s ease 0s, margin-top 0.5s ease 0s;
 }
 
-#bep_custom-search-form .radius-input-visible {
+.bep_archive #bep_custom-search-form .radius-input-visible {
     display: block;
 }
 
-#bep_custom-search-form .radius-toggle.radius-input-visible:after, #bep_custom-search-form .radius-display.radius-input-visible:after {
+.bep_archive #bep_custom-search-form .radius-toggle.radius-input-visible:after, #bep_custom-search-form .radius-display.radius-input-visible:after {
     position: absolute;
     content: "\f013";
     font-family: 'FontAwesome';
@@ -195,17 +217,18 @@ Add your custom styles in this file so it is easier to update the theme.
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     margin-top: -1px;
-    color: #8c8c8c;
+    color: #fff;
     z-index: 1;
     line-height: 37px;
+    padding: 8px 10px;
 }
 
-#bep_custom-search-form  .radius-input-visible:after {
+.bep_archive #bep_custom-search-form  .radius-input-visible:after {
     font-size: 22px;
     line-height: 24px;
 }
 
-#bep_custom-search-form .category-clear, #bep_custom-search-form .location-clear, #bep_custom-search-form .radius-clear {
+.bep_archive #bep_custom-search-form .category-clear, #bep_custom-search-form .location-clear, #bep_custom-search-form .radius-clear {
     background: #fff;
     -moz-border-radius: 100%;
     -webkit-border-radius: 100%;
@@ -225,16 +248,16 @@ Add your custom styles in this file so it is easier to update the theme.
     z-index: 1;
 }
 
-#bep_custom-search-form .radius-clear .fa {
+.bep_archive #bep_custom-search-form .radius-clear .fa {
     font-size: 10px;
     line-height: 14px;
 }
 
-#bep_custom-search-form .radius-display .radius-text {
+.bep_archive #bep_custom-search-form .radius-display .radius-text {
     display: none;
 }
 
-#bep_custom-search-form .radius-popup-container {
+.bep_archive #bep_custom-search-form .radius-popup-container {
     width: 200px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -261,7 +284,7 @@ Add your custom styles in this file so it is easier to update the theme.
     transition: opacity 0.2s ease 0s, margin-top 0.5s ease 0s;
 }
 
-#bep_custom-search-form .radius-popup-container.radius-input-hidden {
+.bep_archive #bep_custom-search-form .radius-popup-container.radius-input-hidden {
     display: block;
     border: none;
     height: 0;
@@ -269,7 +292,7 @@ Add your custom styles in this file so it is easier to update the theme.
     overflow: hidden;
 }
 
-#bep_custom-search-form .radius-popup-close {
+.bep_archive #bep_custom-search-form .radius-popup-close {
     -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
@@ -289,20 +312,20 @@ Add your custom styles in this file so it is easier to update the theme.
     cursor: pointer;
 }
 
-#bep_custom-search-form .fa{
+.bep_archive #bep_custom-search-form .fa{
     margin:0;
 }
 
-#bep_custom-search-form .radius-value, #bep_custom-search-form .radius-units {
+.bep_archive #bep_custom-search-form .radius-value, #bep_custom-search-form .radius-units {
     color: #4e4e4e;
 }
 
-#bep_custom-search-form .radius-search {
+.bep_archive #bep_custom-search-form .radius-search {
     margin: 6px 15px 5px 15px;
     width: 166px;
 }
 
-#bep_custom-search-form .radius-popup-help {
+.bep_archive #bep_custom-search-form .radius-popup-help {
     display: block;
     padding: 8px 15px 10px;
     width: 100%;

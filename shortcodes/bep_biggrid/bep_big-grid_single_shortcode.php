@@ -24,7 +24,6 @@ function bep_biggrid_single( $bep_biggrid_single_shortcode_atts) {
 			),
 		),
 	);
-
 	$bep_biggrid_single_big_query = new WP_Query( $bep_biggrid_single_big_query_args );
 	$prefix = "bep_" ;
 	$return_string =	"<div class='{$prefix}block_wrap {$prefix}block_big_grid_3 {$prefix}uid_12_5857ad1ec83a8_rand {$prefix}grid-style-1 {$prefix}hover-1 {$prefix}pb-border-top {$prefix}shortcode_biggrid'>";
