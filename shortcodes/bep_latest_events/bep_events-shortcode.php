@@ -9,30 +9,39 @@ function bep_shortcode_events($bep_shortcode_events_attr) {
 	'bep_taxonomy_name' => '',
 	'bep_taxonomy_terms' => ''
 	),$bep_shortcode_events_attr, 'bep_shortcode_events');
+
+	// If taxonomy terms are provided in the shortcode load them. Or load all posts from the provided or default taxonomy.
+	if (!empty($bep_shortcode_events_attr['bep_taxonomy_terms'])) {
+		$bep_shortcode_events_terms_array = array_map('intval', explode(',', $bep_shortcode_events_attr['bep_taxonomy_terms']));
+	}
+	else {
+		$bep_shortcode_events_terms_array = get_terms( $bep_shortcode_events_attr['bep_taxonomy_name'], 'hide_empty=0&fields=ids' );
+	}
 	
 	$bep_shortcode_events_args = array(
 	    'post_type' => 'ait-event-pro', // Tell WordPress which post type we want
         'orderby' => 'meta_value', // We want to organize the events by date    
         'meta_key' => 'be_event_datefrom', // Grab the "start date" field created via "More Fields" plugin (stored in YYYY-MM-DD format)
         'order' => 'ASC', // ASC is the other option    
-	    'posts_per_page' => $bep_shortcode_events_attr['bep_total_post'], // Let's show them all.   
-        'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
-            array(
-                'key' => 'be_event_datefrom', // Check the start date field
-                'value' => time(), // Set today's date (note the similar format)
-                'compare' => '>=', // Return the ones greater than today's date
-                'type' => 'NUMERIC,' // Let WordPress know we're working with numbers
-            )
-        )
+	    'posts_per_page' => $bep_shortcode_events_attr['bep_total_post'], // Let's show them all.
+	    'meta_query'	=>	array( // WordPress has all the results, now, return only the events after today's date
+        	array(
+            	'key' => 'be_event_datefrom', // Check the start date field
+            	'value' => time(), // Set today's date (note the similar format)
+            	'compare' => '>=', // Return the ones greater than today's date
+            	'type' => 'NUMERIC,' // Let WordPress know we're working with numbers
+        	)
+    	)
+
     );
 
 	if (!empty([$bep_shortcode_events_attr['bep_taxonomy_name']])) {
-		$bep_shortcode_1_args_1[] = array (
-			'tax_query' => array (		
+		$bep_shortcode_events_args['tax_query'] = array (
+			array (		
 					'taxonomy' => $bep_shortcode_events_attr['bep_taxonomy_name'],
 					'field'    => 'term_id',
-					'terms'    => $bep_shortcode_1_terms_array,
-				)
+					'terms'    => $bep_shortcode_events_terms_array,
+			)
 		);
 	}
 

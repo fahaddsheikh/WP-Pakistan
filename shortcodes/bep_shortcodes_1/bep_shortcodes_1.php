@@ -12,7 +12,7 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 	
 	// If taxonomy terms are provided in the shortcode load them. Or load all posts from the provided or default taxonomy.
 	if (!empty($bep_shortcode_1_attr['bep_taxonomy_terms'])) {
-		$bep_shortcode_1_terms_array = array_map('intval', explode(',', $bep_shortcode_1_attr['bep_taxonomy_terms']));;
+		$bep_shortcode_1_terms_array = array_map('intval', explode(',', $bep_shortcode_1_attr['bep_taxonomy_terms']));
 	}
 	else {
 		$bep_shortcode_1_terms_array = get_terms( $bep_shortcode_1_attr['bep_taxonomy_name'], 'hide_empty=0&fields=ids' );
@@ -23,8 +23,6 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 		'posts_per_page' => 1,
 	);
 
-	$bep_shortcode_1_query_1 = new WP_Query( $bep_shortcode_1_args_1 );
-
 	$bep_shortcode_1_args_2 = array(
 		'post_type' => $bep_shortcode_1_attr['bep_post_type'],
 		'posts_per_page' => 8,
@@ -32,15 +30,15 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 	);
 
 	if (!empty([$bep_shortcode_1_attr['bep_taxonomy_name']])) {
-		$bep_shortcode_1_args_1[] = array (
-			'tax_query' => array (		
+		$bep_shortcode_1_args_1['tax_query'] = array (
+			array (		
 					'taxonomy' => $bep_shortcode_1_attr['bep_taxonomy_name'],
 					'field'    => 'term_id',
 					'terms'    => $bep_shortcode_1_terms_array,
 				)
 		);
-		$bep_shortcode_1_args_2[] = array (
-			'tax_query' => array (		
+		$bep_shortcode_1_args_2['tax_query'] = array (
+			array (		
 					'taxonomy' => $bep_shortcode_1_attr['bep_taxonomy_name'],
 					'field'    => 'term_id',
 					'terms'    => $bep_shortcode_1_terms_array,
@@ -48,7 +46,9 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 		);
 	}
 
+	$bep_shortcode_1_query_1 = new WP_Query( $bep_shortcode_1_args_1 );
 	$bep_shortcode_1_query_2 = new WP_Query( $bep_shortcode_1_args_2 );
+
 	$prefix = "bep_";
 	$return_string ="<div class='{$prefix}block_wrap {$prefix}block_1 {$prefix}pb-border-top red-block {$prefix}shortcode_1'>";
 	$return_string.=	"<div class='bep-block-title-wrap'><h4 class='block-title'><span style='margin-right: 0px;'>".$bep_shortcode_1_attr['bep_title']."</span></h4>";

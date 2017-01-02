@@ -20,16 +20,20 @@ function bep_shortcode_3($bep_shortcode_3_attr) {
 	}
 
 	$bep_shortcode_3_args = array(
-	'post_type' => $bep_shortcode_3_attr['bep_post_type'],
-	'posts_per_page' => intval($bep_shortcode_3_attr['bep_total_post']),
-	'tax_query' => array(		
-			array(
-				'taxonomy' => $bep_shortcode_3_attr['bep_taxonomy_name'],
-				'field'    => 'term_id',
-				'terms'    => $bep_shortcode_3_terms_array,
-			),
-		),
+		'post_type' => $bep_shortcode_3_attr['bep_post_type'],
+		'posts_per_page' => intval($bep_shortcode_3_attr['bep_total_post']),
 	);
+
+	if (!empty([$bep_shortcode_3_attr['bep_taxonomy_name']])) {
+		$bep_shortcode_3_args['tax_query'] = array (
+			array (		
+					'taxonomy' => $bep_shortcode_3_attr['bep_taxonomy_name'],
+					'field'    => 'term_id',
+					'terms'    => $bep_shortcode_3_terms_array,
+				)
+		);
+	}
+
 	$bep_shortcode_3_query = new WP_Query( $bep_shortcode_3_args );
 
 	$prefix='bep_';

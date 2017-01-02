@@ -4,14 +4,14 @@
 function bep_shortcode_reviews($bep_shortcode_reviews_attr) {
 	// Shortcode Attributes
 	$bep_shortcode_reviews_attr = shortcode_atts ( array(
-	'bep_title'=>'Latest Reviews',
-	'bep_total_post' =>  '10'
+		'bep_title'=>'Latest Reviews',
+		'bep_total_post' =>  '10'
 	),$bep_shortcode_reviews_attr, 'bep_shortcode_reviews');
 	
 
 	$bep_shortcode_reviews_args = array(
-	'post_type' => 'ait-review',
-	'posts_per_page' => $bep_shortcode_reviews_attr['bep_total_post']
+		'post_type' => 'ait-review',
+		'posts_per_page' => $bep_shortcode_reviews_attr['bep_total_post']
 	);
 	$bep_shortcode_reviews_query = new WP_Query( $bep_shortcode_reviews_args );
 
