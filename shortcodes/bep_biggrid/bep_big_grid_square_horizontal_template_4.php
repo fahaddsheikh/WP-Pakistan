@@ -8,7 +8,7 @@
 	$return_string .=		"<div class='{$prefix}meta-info-container'>	";
 	$return_string .=			"<div class='{$prefix}meta-align'>	";
 	$return_string .=				"<div class='{$prefix}big-grid-meta'>	";
-										$bep_selectedtype = get_post_meta( $bep_biggrid_square_big_query->post->ID, 'bep_type', true );
+										$bep_selectedtype = get_post_meta( get_the_id(), 'bep_type', true );
 										if (isset($bep_selectedtype) && !empty($bep_selectedtype) ) {
 	$return_string .=						"<span class='{$prefix}post-category'>" . $bep_selectedtype . "</span>";
 										}                     

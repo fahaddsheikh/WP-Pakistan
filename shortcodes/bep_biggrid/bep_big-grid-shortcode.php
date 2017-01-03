@@ -22,6 +22,13 @@ function bep_biggrid( $bep_biggrid_square_shortcode_atts ) {
 		'post_type' => $bep_biggrid_square_shortcode_atts['bep_post_type'],
 		'posts_per_page'      => 1,
 		'post_status' => 'publish',
+		'tax_query' => array(
+			array(
+				'taxonomy' => $bep_biggrid_square_shortcode_atts['bep_taxonomy_type'],
+				'field'    => 'slug',
+				'terms'    => 'featured',
+			),
+		),
 
 	);
 	$bep_biggrid_square_big_query = new WP_Query( $bep_biggrid_square_big_query_args );
