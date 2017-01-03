@@ -35,7 +35,7 @@ function bep_shortcode_events($bep_shortcode_events_attr) {
 
     );
 
-	if (!empty([$bep_shortcode_events_attr['bep_taxonomy_name']])) {
+	if (!empty($bep_shortcode_events_attr['bep_taxonomy_name'])) {
 		$bep_shortcode_events_args['tax_query'] = array (
 			array (		
 					'taxonomy' => $bep_shortcode_events_attr['bep_taxonomy_name'],
