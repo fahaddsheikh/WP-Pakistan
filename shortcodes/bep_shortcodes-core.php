@@ -49,6 +49,7 @@ add_action( 'wp_enqueue_scripts', 'bep_include_shortcode_styles' );
 function bep_register_meta_boxes() {
     add_meta_box( 'bep_metaboxes', __( 'Type', 'textdomain' ), 'bep_type_box_content_callback' );
     add_meta_box( ' ', __( 'BEP Event Date', 'textdomain' ), 'be_event_datefrom_content_callback', 'ait-event-pro' );
+    add_meta_box( ' ', __( 'BEP Review Item Categories', 'textdomain' ), 'be_review_category_callback', 'ait-review' );
 }
 add_action( 'add_meta_boxes', 'bep_register_meta_boxes' );
 
@@ -68,25 +69,26 @@ function bep_type_box_content_callback( $post ) {
     $bep_previously_selected_type = get_post_meta( $post->ID, $key, true );
 
 ?>
-	<!-- About Settings -->
-	<table class="form-table">
-	    <tbody>
-	        <?php foreach ($bep_type as $key => $value) { ?>
-	            <tr>
-	                <td style="max-width:30px;"><label for="<?php echo $key ?>"><h4><?php echo $value ?></h4></label></td>
-	                <td>
-	                	<?php $bep_selectedtype = get_post_meta( $post->ID, $key, true ); ?>
-	              	    <select name='<?php echo $key ?>' id='<?php echo $key ?>'>
-				            <option value="Business" <?php if($bep_selectedtype == 'Business') : echo 'selected'; endif; ?>>Business</option>
-				            <option value="Event" <?php if($bep_selectedtype == 'Event') : echo 'selected'; endif; ?> >Event</option>
-				            <option value="Blog"<?php if($bep_selectedtype == 'Blog') : echo 'selected'; endif; ?> >Blog</option>
-				            <option value="Profile"<?php if($bep_selectedtype == 'Profile') : echo 'selected'; endif; ?> >Profile</option>
-				        </select>
-	                </td>
-	            </tr>
-	        <?php } ?>
-	    </tbody>
-	</table>
+    <!-- About Settings -->
+    <table class="form-table">
+        <tbody>
+            <?php foreach ($bep_type as $key => $value) { ?>
+                <tr>
+                    <td style="max-width:30px;"><label for="<?php echo $key ?>"><h4><?php echo $value ?></h4></label></td>
+                    <td>
+                        <?php $bep_selectedtype = get_post_meta( $post->ID, $key, true ); ?>
+                        <select name='<?php echo $key ?>' id='<?php echo $key ?>'>
+                            <option selected>Select One</option>
+                            <option value="Business" <?php if($bep_selectedtype == 'Business') : echo 'selected'; endif; ?>>Business</option>
+                            <option value="Event" <?php if($bep_selectedtype == 'Event') : echo 'selected'; endif; ?> >Event</option>
+                            <option value="Blog"<?php if($bep_selectedtype == 'Blog') : echo 'selected'; endif; ?> >Blog</option>
+                            <option value="Profile"<?php if($bep_selectedtype == 'Profile') : echo 'selected'; endif; ?> >Profile</option>
+                        </select>
+                    </td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
 <?php }
 
 /**
@@ -186,6 +188,8 @@ function be_event_datefrom_content_save_callback( $post_id ) {
         update_post_meta($post_id, $key,  $value);
     }
 }
-add_action( 'save_post', 'be_event_datefrom_content_save_callback' );
+add_action( 'save_post_ait-event-pro', 'be_event_datefrom_content_save_callback' );
+
+
 
 ?>
