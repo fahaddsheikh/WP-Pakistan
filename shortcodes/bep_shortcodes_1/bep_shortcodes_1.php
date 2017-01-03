@@ -29,7 +29,7 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 		'offset' => 1,
 	);
 
-	if (!empty([$bep_shortcode_1_attr['bep_taxonomy_name']])) {
+	if (!empty($bep_shortcode_1_attr['bep_taxonomy_name'])) {
 		$bep_shortcode_1_args_1['tax_query'] = array (
 			array (		
 					'taxonomy' => $bep_shortcode_1_attr['bep_taxonomy_name'],
