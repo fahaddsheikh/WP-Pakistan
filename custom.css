@@ -127,6 +127,10 @@ Add your custom styles in this file so it is easier to update the theme.
     border-radius:5px;
 }
 
+.bep_archive #bep_custom-search-form .sbHolder .sbOptions, .sbHolder .sbOptions {
+    margin:0;
+}
+
 .bep_archive #bep_custom-search-form .radius {
     background-color: #39843f;
     padding: 0 10px;
@@ -334,4 +338,58 @@ Add your custom styles in this file so it is easier to update the theme.
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: #777;
+}
+
+
+/* Responsive CSS*/ 
+
+@media (max-width: 640px) {
+
+    /* Search */
+
+    .bep-search {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .bep_archive #bep_custom-search-form * {
+        margin: 0;
+    }
+
+    .bep_archive #bep_custom-search-form {
+        padding: 20px;
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .bep_archive #bep_custom-search-form .search-wrap {
+        display: block;
+    }
+
+    .bep_archive #bep_custom-search-form .search-wrap input[type="search"] {
+        width: 100%;
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+
+    .bep_archive #bep_custom-search-form .sbHolder {
+        width: 100%;
+        height: 30px;
+        margin: 5px 0;  
+    }
+
+    /* Archive CSS */
+
+    .archive-container {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .archive-container .bep_review {
+        max-width: none;
+        float: none;
+        margin: 0;
+        width: 100%;
+        height: 120px;
+    }
 }

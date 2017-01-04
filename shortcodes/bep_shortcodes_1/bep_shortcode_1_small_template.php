@@ -9,10 +9,10 @@ $return_string.='		</div>';
 $return_string.='		<div class="item-details">';
 $return_string.='			<h3 class="entry-title bep_module-title">';
 
-if (strlen(get_the_title())>=60)
+if (strlen(get_the_title())>=20)
 { 
 	 $return_string.='<a href="'. get_permalink() .'" rel="bookmark" title="'.get_the_title().'">';
-	 $return_string.= substr_replace(get_the_title(),'...', 60);
+	 $return_string.= substr_replace(get_the_title(),'...', 20);
 }
 else {
 	$return_string.='<a href="'. get_permalink() .'" rel="bookmark" title="'.get_the_title().'">';

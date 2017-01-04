@@ -91,7 +91,7 @@
 								 											 	echo get_the_title();
 								 											 	echo "<span>-</span>";
 								 											}
-								 											if (isset($profile_types)) {
+								 											if (isset($profile_types) && !empty($profile_types)) {
 								 												foreach ( $profile_types  as $profile_type ) {
 						 											        		$out[] = esc_html( $profile_type->name );
 																	        	}
