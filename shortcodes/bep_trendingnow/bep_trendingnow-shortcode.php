@@ -47,4 +47,4 @@ function bep_trendingnow() {
 
 }
 add_shortcode('bep_trendingnow' , 'bep_trendingnow');
-?>
+?> 

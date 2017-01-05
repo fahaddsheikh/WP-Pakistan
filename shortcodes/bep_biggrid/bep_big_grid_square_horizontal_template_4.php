@@ -1,8 +1,15 @@
-<?php 
+<?php
+$bep_selectedtype = get_post_type(); 
 	$return_string .=	"<div class='{$prefix}module_mx11 {$prefix}animation-stack {$prefix}big-grid-post-1 {$prefix}big-grid-post {$prefix}medium-thumb'>	";
 	$return_string .=		"<div class='{$prefix}module-thumb'>	";
 	$return_string .=			"<a href='" . get_permalink() . "' rel='bookmark' title='" . get_the_title() . "'>	";
+								if ($bep_selectedtype == 'ait-event-pro') {
+									$bep_selectedtype_array = get_post_meta(get_the_id(), '_ait-event-pro_event-pro-data', true);
+	$return_string .= 				"<img width='649' height='500' src='" . $bep_selectedtype_array['headerImage'] . "'>";							
+								}
+									else {
 	$return_string .=				 get_the_post_thumbnail( get_the_id() ,  'bep_649x500' );
+								}
 	$return_string .=			"</a>";
 	$return_string .=		"</div>";        
 	$return_string .=		"<div class='{$prefix}meta-info-container'>	";
