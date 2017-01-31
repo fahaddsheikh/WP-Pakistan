@@ -1,7 +1,0 @@
-v1.1, 01.12.2016
-----------------
-- Fix: Admin scripts enqueue hook conditions
-
-v1.0, 02.11.2016
-----------------
-- Plugin release
