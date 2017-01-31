@@ -149,7 +149,7 @@ function bep_biggrid( $bep_biggrid_square_shortcode_atts ) {
 	if ( $bep_biggrid_small_two_query->have_posts() ) :
 		while ( $bep_biggrid_small_two_query->have_posts() ) : $bep_biggrid_small_two_query->the_post(); 
 				$return_string .=	"<div class='{$prefix}module_mx6 {$prefix}animation-stack {$prefix}big-grid-post-3 {$prefix}big-grid-post {$prefix}small-thumb'>	";
-				$return_string .=		bep_custom_thumb(324,235);
+				$return_string .=		bep_custom_thumb(324,235,'biggrid');
 				$return_string .=		"<div class='{$prefix}meta-info-container'>	";
 				$return_string .=			"<div class='{$prefix}meta-align'>	";
 				$return_string .=				"<div class='{$prefix}big-grid-meta'>	";

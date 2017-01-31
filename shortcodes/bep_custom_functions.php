@@ -1,6 +1,6 @@
 <?php
 $prefix = "bep_";
-function bep_custom_thumb($image_width,$image_height, $module_type = '') {
+function bep_custom_thumb($image_width = '',$image_height = '', $module_type = '') {
 
 	global $prefix;
 	$bep_selectedtype = get_post_type();
@@ -21,15 +21,15 @@ function bep_custom_thumb($image_width,$image_height, $module_type = '') {
 		$bep_eventfrom_date_suffix = date('S', $bep_event_date);
 		$bep_eventfrom_month = date('M', $bep_event_date);
 
-			if($module_type == 'event') {
-
-				$image_link =  get_permalink(get_post_meta(get_the_id(), 'post_id', true)) ;
-				$image_src_link = get_the_title(get_post_meta(get_the_id(), 'post_id', true));
+			if($module_type == 'biggrid') {
+				
+				$image_src_link =  get_post_meta(get_the_id(), '_ait-event-pro_event-pro-data', true);
 
 			}
 			else {
 
-				$image_src_link =  get_post_meta(get_the_id(), '_ait-event-pro_event-pro-data', true);
+				$image_link =  get_permalink(get_post_meta(get_the_id(), 'post_id', true)) ;
+				$image_src_link = get_the_title(get_post_meta(get_the_id(), 'post_id', true));
 
 			}
 	}
@@ -43,16 +43,16 @@ function bep_custom_thumb($image_width,$image_height, $module_type = '') {
 	$return_string ="	<div class='{$prefix}module-thumb'>";
 	$return_string.="		<a href='" . $image_link . "' rel='bookmark' title='".$get_title."'>";
 
-	if ($module_type == 'event') {
+	if ($module_type == 'biggrid') {
+		$bep_selectedtype_array = $image_src_link;
+		$return_string .= 				"<img width='324' height='235' src='" . $bep_selectedtype_array['headerImage'] . "'>";	
 
-		$return_string.=    "<span class='event-date'>" . $bep_eventfrom_date . "<sup>" . $bep_eventfrom_date_suffix . "</sup></span>";
-		$return_string.=    "<span class='event-month'>" . $bep_eventfrom_month . "</span>";
 	}
 
-	else if ($bep_selectedtype == 'ait-event-pro') {
+	else if ($module_type == 'normal') {
 
-		$bep_selectedtype_array = $image_src_link;
-		$return_string .= 				"<img width='324' height='235' src='" . $bep_selectedtype_array['headerImage'] . "'>";						
+		$return_string.=    "<span class='event-date'>" . $bep_eventfrom_date . "<sup>" . $bep_eventfrom_date_suffix . "</sup></span>";
+		$return_string.=    "<span class='event-month'>" . $bep_eventfrom_month . "</span>";					
 	}
 
 	else {
@@ -71,36 +71,24 @@ function bep_custom_title() {
 
 	$bep_selectedtype = get_post_type();
 	global $prefix;
-		
+	$post_link = get_permalink();
+	$get_title = get_the_title();	
 	if ($bep_selectedtype=="ait-review") {
-		$image_link = get_permalink( get_post_meta(get_the_id(), 'post_id', true) );
 		$get_title = get_the_title( get_post_meta(get_the_id(), 'post_id', true) );
-	}
-
-	else {
-    
-		$post_link = get_permalink();
-		$get_title = get_the_title();
-
 	}
 
 	$return_string ="		<h3 class='entry-title {$prefix}module-title'>";
 	$return_string.="			 <a href='" . $post_link . "' rel='bookmark' title='".$get_title."'>";
-	if  (($bep_selectedtype == "profile") ||  ($bep_selectedtype == "ait-item")) {
-		if (strlen(get_the_title())>=20)
-		{ 
-		 	$return_string.= substr_replace(get_the_title(),'...', 20);
+	if  ((($bep_selectedtype == "profile") ||  ($bep_selectedtype == "ait-item")) && (strlen($get_title)>=20) ) {
+		
+		 	$return_string.= substr_replace($get_title,'...', 20);
 		}
 	
-		else {
-			$return_string.=get_the_title();
-		}
-	}
 	else {
 
-	$return_string.=get_the_title();
-	
-	}	
+		$return_string.=$get_title;
+	}
+		
 	$return_string.='	</a>';
 	$return_string.='		</h3>';
 	

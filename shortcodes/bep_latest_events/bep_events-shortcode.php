@@ -61,7 +61,7 @@ function bep_shortcode_events($bep_shortcode_events_attr) {
 											
 
 	$return_string.=					"<div class='bep_module_6 bep_module_wrap {$prefix}event events-container ratings-shown events-ajax-shown'>";
-	$return_string.=						bep_custom_thumb("","",'event');
+	$return_string.=						bep_custom_thumb("","","normal");
 	$return_string.=							"<div class='item-details'>";
 	$return_string.=								"<div class='{$prefix}event-title'>";
 	$return_string.= 									bep_custom_title();
