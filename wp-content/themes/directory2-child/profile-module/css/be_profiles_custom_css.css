@@ -1,0 +1,355 @@
+/* Grid Settings */ 
+
+.bep-profile-main {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    clear: both;
+}
+
+.bep-profile-wrapper {
+    max-width: 1300px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.bep-column {
+    clear:both;
+    padding:0px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.bep-row {
+    margin-left:-24px;
+    margin-right:-24px;
+}
+
+.bep-row [class*="bep-span"] {
+    display: block;
+    min-height: 1px;
+    float: left;
+    position: relative;
+    box-sizing:border-box;
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+.bep-row:before , .bep-row:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    visibility: hidden;
+}
+
+.bep-span1 {
+  width: 8.33333333%;
+}
+.bep-span2 {
+  width: 16.66666667%;
+}
+.bep-span3 {
+  width: 25%;
+}
+.bep-span4 {
+  width: 33.33333333%;
+}
+.bep-span5 {
+  width: 41.66666667%;
+}
+.bep-span6 {
+  width: 50%;
+}
+.bep-span7 {
+  width: 58.33333333%;
+}
+.bep-span8 {
+  width: 66.66666667%;
+}
+.bep-span9 {
+  width: 75%;
+}
+.bep-span10 {
+  width: 83.33333333%;
+}
+.bep-span11 {
+  width: 91.66666667%;
+}
+.bep-span12 {
+  width: 100%;
+}
+
+/* Title CSS */
+
+.be_about .bep-block-title-wrap .block-title , .be_advanced_details .bep-block-title-wrap .block-title {
+    font-size: 14px;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 26px;
+    border-bottom: 2px solid #222;
+    margin-bottom:10px;
+}
+
+.be_about .bep-block-title-wrap .block-title span  , .be_advanced_details .bep-block-title-wrap .block-title span {
+    line-height: 17px;
+    display: inline-block;
+    padding: 7px 12px 4px 12px;
+    background-color: #222;
+    color: #fff;
+}
+
+
+/* Profile Archive CSS*/
+
+.profile-archive .td-module-meta-info .td-post-author-name ,
+.profile-archive .td-module-meta-info .td-module-comments , 
+.profile-archive .td-module-meta-info .td-post-date {
+    display:none;
+}
+
+.profile-archive .td-next-prev-wrap {
+    text-align:center;
+}
+
+.profile-archive .td-next-prev-wrap a {
+    width: 30px;
+    height: 30px;
+    line-height: 29px;
+    font-size: 10px;
+}
+
+
+/* Profile Single CSS */
+
+.be_profilepicture {
+    padding-right:0px !important;
+}
+
+.be_profiledetails {
+    padding: 0 15px !important;
+}
+
+.be_profiledetails_occupation , .be_profiledetails_location {    
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.be_profiledetails_title h3 {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.be_furtherdetails {
+    font-size: 13px;
+    line-height: 16px;
+    padding:10px 0;
+    font-family: 'Roboto', sans-serif;
+    color:#000;
+}
+
+.be_furtherdetails .bep-row {
+    margin-bottom:5px;
+}
+
+.be_furtherdetails .bep-span3 {
+    font-weight:bold;
+}
+
+.be_profiledetails_social {
+    padding:10px 0;
+}
+
+.be_profiledetails .be_profiledetails_social .bep-social-icon-wrap .bep-icon-font {
+    font-size: 11px;
+    width: 22px;
+    height: 22px;
+    line-height: 23px;
+    background-color: #2860A5;
+    color: #fff;
+    border-radius:50px;
+    text-align:center;
+}
+
+/*Advanced Details*/
+
+.be_advanced_details .bep-span4 {
+    height: 500px;
+}
+
+.be_advanced_details .wpb_column:nth-last-of-type(-n+2) {
+    height: auto;
+}
+
+/* About CSS */ 
+
+.be_about {
+    margin:10px 0;
+}
+
+.be_about .bep-block-title-wrap {
+    position:relative;
+}
+
+.be_about_text {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 0;
+    text-align: justify;
+}
+
+/*Contact Form CSS*/
+
+.be_contact_form #respond {
+    background-color:transparent;
+    padding:0;
+    margin:0;
+}
+
+.be_contact_form {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    box-shadow: 5px 5px 15px #eee;
+    margin-bottom: 20px;
+}
+
+.be_contact_form input[type="text"] {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset;
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1) inset;
+    color: #777;
+    padding: 4px 15px;
+    vertical-align: top;
+    width:100%;
+}
+
+.be_error {
+    border: 0;
+    font-size: 12px;
+    color: red;
+    border-left: 2px solid red;
+    padding-left: 10px;
+    color:#cc0000;
+    line-height:30px;
+}
+
+.input-col {
+    clear: both;
+    overflow: hidden;
+}
+
+.input-col-submit {
+    max-width: 22%;
+    float: left;
+}
+
+.input-col-message-container {
+    max-width: 70%;
+    float: left;
+    margin-left: 10px;
+    line-height: 16px;
+    font-size: 13px;
+}
+
+/* Gallery CSS */
+
+.be_advanced_details .gallery-item { 
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.be_advanced_details .gallery-item .gallery-icon img {
+    display: inline-block;
+}
+
+.be_advanced_details .gallery .gallery-icon a {
+    display: inline-block;
+    position: relative;
+    margin: 5px 0;
+}
+
+.be_advanced_details .gallery .gallery-icon img {
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    width: auto;
+    vertical-align: top;
+    margin-bottom: 0px;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    position: relative;
+}
+
+/* Submit your story css */
+
+.submit-your-story-banner {
+    background-color: #da3b46;
+    margin-right:-30%;
+    margin-left:-30%;
+}
+
+.submit-your-story-inner {
+    max-width: 1068px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.submit-your-story-inner h2 {
+    color: #fff;
+}
+
+.submit-your-story-banner-button a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    background-color: #222222;
+    border-radius: 0;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-weight: 500;
+    -webkit-transition: background-color 0.4s;
+    -moz-transition: background-color 0.4s;
+    -o-transition: background-color 0.4s;
+    transition: background-color 0.4s;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+/* Search Query Fix CSS */
+
+.search .td-module-meta-info {
+    display:none;
+}
+
+/*Responsive CSS*/
+
+
+@media screen and (min-width: 768px) {
+    .profile-archive .td_module_mx3 {
+        width: 33%;
+        float: left;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .be_profilepicture , .be_profiledetails {
+        text-align:center;
+    }
+
+}

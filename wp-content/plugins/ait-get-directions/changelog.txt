@@ -1,0 +1,146 @@
+v2.8, 09.12.2016
+----------------
+- Added: Location preference option
+
+v2.7, 20.10.2016
+----------------
+- Update: Plugin compatibility 
+
+v2.6, 06.10.2016
+----------------
+- New: Redesign of plugin admin page
+- Updated: POT Translation file
+
+v2.5, 8.9.2016
+--------------
+- Tweak: Close modal window 'Plan my route' by clicking outside of it
+
+v2.4, 14.07.2016
+-----------------
+- Updated: Remove checked status of geolocation checkbox when there is no geolocation
+- Added: Compatibility functions
+
+v2.3, 02.06.2016
+-----------------
+- Updated: Form radius input now accepts radius entered in miles
+
+v2.2, 11.05.2016
+-----------------
+- Updated: Form radius input now accepts decimal numbers
+
+v2.1, 27.04.2016
+-----------------
+- Added: Automatically deactivate the plugin on old or non compatible themes
+
+v2.0, 12.04.2016
+-----------------
+- Updated: Plugin completely refactored
+- Added: Added options for map styling
+- Added: Added options for form customization
+- Added: Added options for directions
+- Updated: Admin options relocated into Theme options
+- Updated: Directions form refactored, updated layout
+- Updated: Directions javascript refactored
+- Fixed: Fixed performance of the plugin google maps
+- Updated: Updated element options
+- Updated: Element refactored to meet the framework standards
+- Updated: Updated css files for element, form, buttons
+- Removed: Removed shortcode functionality
+- Removed: Removed unused functions, files
+- Updated: Updated POT language files
+
+v1.19, 15.12.2015
+-----------------
+- Fixed: Admin js tweaks
+
+v1.18, 18.11.2015
+-----------------
+- Fixed: Error missing jquery library
+
+v1.17, 10.11.2015
+-----------------
+- Update: Updated pot translation files
+
+v1.16, 27.10.2015
+-----------------
+- Fixed: Element display on item detail page
+
+v1.15, 13.10.2015
+-----------------
+- Added: km / mi display switch
+
+v1.14, 18.09.2015
+-----------------
+- Updated: Form button labels on single page
+
+v1.13, 08.09.2015
+-----------------
+- Added: Added form button labels to config
+
+v1.12, 25.08.2015
+-----------------
+- Added: Activate/Deactivate button in direction map
+
+v1.11, 18.08.2015
+----------------
+- Updated: Using google.com instead of google.sk
+
+v1.10, 11.08.2015
+----------------
+- Fixed: Item address is now destination instead of starting position
+- Updated: POT Translation file
+
+v1.9, 14.07.2015
+----------------
+- Update: Updated frontend form width
+
+v1.8, 07.07.2015
+-----------------
+- Added: Missing textdomains
+- Update: Updated pot translation files
+
+v1.7, 01.07.2015
+----------------
+- Fixed: Transporation types
+- Updated: Language translations
+- Update: All translations are now handled by AIT Languages plugin
+
+
+v1.6, 09.06.2015
+----------------
+- Fixed: update route when travel mode is changed
+
+v1.5, 19.05.2015
+----------------
+- Added: Progressive preloading for item extension element
+- Fixed: Frontend stylesheet load
+
+v1.4, 05.05.2015
+----------------
+- Added: New language - Turkish (tr_TR)
+- Updated: All other languages were updated
+- Fixed: Colorbox responsive
+
+
+v1.3, 21.4.2015
+---------------
+- Tweak: normalized names of files and text domains
+
+
+v1.2, 17.3.2015
+---------------
+- Added geolocation to element
+- Added custom pins to route start and dest position
+- Fixed geolcoation for cityguide theme
+- Clear theme cache on plugin activation
+
+
+v1.1, 10.3.2015
+--------------
+- Fixed textdomain
+- Added languages
+
+
+v1.0, 2.3.2015
+-------------
+- Public release

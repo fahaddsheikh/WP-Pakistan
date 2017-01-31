@@ -1,0 +1,14 @@
+/* AIT Claim Listing Admin Style */
+
+.ait-claim-status 						{ text-align: center; }
+.ait-claim-status div 					{ font-weight: bold; margin-bottom: 5px; text-transform: capitalize; }
+.ait-claim-status .button 				{ margin-bottom: 2px; }
+.ait-claim-status .button:first-of-type { margin-right: 2px; }
+.ait-claim-status .button:last-of-type 	{ margin-left: 2px; }
+
+
+/* Item Details Page */
+
+.ait-ait-item-claim-listing-tabs-panel .ait-opt-container .ait-opt-wrapper { padding: 8px 14px; color: #888; line-height: 20px; }
+
+/* AIT Claim Listing Admin Style */

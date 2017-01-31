@@ -1,0 +1,374 @@
+# Copyright (C) 2016 AitThemes.Club
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: AIT Permissions Manager\n"
+"Report-Msgid-Bugs-To: https://system.ait-themes.club/support/\n"
+"POT-Creation-Date: 2016-11-18 12:13:17+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: ait-permissions-manager.php:113 config/available-capabilities.php:42
+msgid "Settings"
+msgstr ""
+
+#: ait-permissions-manager.php:128
+msgid "Current theme is not compatible with Permissions Manager plugin!"
+msgstr ""
+
+#: ait-permissions-manager.php:148
+msgid "Permissions manager needs higher version of the theme (%s, %s) to work properly, please update theme to the latest version. Minimum theme version: %s"
+msgstr ""
+
+#: ait-permissions-manager.php:238 ait-permissions-manager.php:239
+#: ait-permissions-manager.php:254 ait-permissions-manager.php:267
+msgid "Permissions Manager"
+msgstr ""
+
+#: ait-permissions-manager.php:259
+msgid "Save Options"
+msgstr ""
+
+#: ait-permissions-manager.php:282
+msgid "Custom Capabilities Manager"
+msgstr ""
+
+#: ait-permissions-manager.php:297
+msgid "Are you sure you want to reset all capabilities to their defaults for this role ?"
+msgstr ""
+
+#: ait-permissions-manager.php:297
+msgid "Reset to defaults"
+msgstr ""
+
+#: ait-permissions-manager.php:314
+msgid "There are no settings for the current section"
+msgstr ""
+
+#: ait-permissions-manager.php:329
+msgid "Refresh page to manage newly added capability"
+msgstr ""
+
+#: ait-permissions-manager.php:364 ait-permissions-manager.php:466
+msgid "Capability Slug"
+msgstr ""
+
+#: ait-permissions-manager.php:368 ait-permissions-manager.php:470
+msgid "Name of capability e.g. \"edit_posts\""
+msgstr ""
+
+#: ait-permissions-manager.php:389 ait-permissions-manager.php:491
+msgid "Capability Label"
+msgstr ""
+
+#: ait-permissions-manager.php:394 ait-permissions-manager.php:495
+msgid "Label for capability, used in role capability list"
+msgstr ""
+
+#: ait-permissions-manager.php:416 ait-permissions-manager.php:516
+msgid "Capability Help"
+msgstr ""
+
+#: ait-permissions-manager.php:420 ait-permissions-manager.php:520
+msgid "Help text for capability, used in role capability list"
+msgstr ""
+
+#: ait-permissions-manager.php:442
+msgid "No Items Defined"
+msgstr ""
+
+#: ait-permissions-manager.php:449
+msgid "Input"
+msgstr ""
+
+#: ait-permissions-manager.php:544
+msgid "+ Add New Item"
+msgstr ""
+
+#: ait-permissions-manager.php:547
+msgid "Open/Collapse All Items"
+msgstr ""
+
+#: ait-permissions-manager.php:550
+msgid "Remove"
+msgstr ""
+
+#: ait-permissions-manager.php:553
+msgid "Remove All Items"
+msgstr ""
+
+#: config/available-capabilities.php:38
+msgid "Wordpress Capabilities"
+msgstr ""
+
+#: config/available-capabilities.php:43
+msgid "Enables the management of wordpress settings"
+msgstr ""
+
+#: config/available-capabilities.php:48
+msgid "Media"
+msgstr ""
+
+#: config/available-capabilities.php:49
+msgid "Enables the management of media"
+msgstr ""
+
+#: config/available-capabilities.php:57
+msgid "Theme Capabilities"
+msgstr ""
+
+#: config/available-capabilities.php:61
+msgid "Theme Options"
+msgstr ""
+
+#: config/available-capabilities.php:62
+msgid "Enables the management of theme options"
+msgstr ""
+
+#: config/available-capabilities.php:67
+msgid "Default Layout"
+msgstr ""
+
+#: config/available-capabilities.php:68
+msgid "Enables the management of default layout"
+msgstr ""
+
+#: config/available-capabilities.php:73
+msgid "Import / Export"
+msgstr ""
+
+#: config/available-capabilities.php:74
+msgid "Enables the management of import / export"
+msgstr ""
+
+#: config/available-capabilities.php:79
+msgid "Page Builder"
+msgstr ""
+
+#: config/available-capabilities.php:80
+msgid "Enables the management of page builder"
+msgstr ""
+
+#: config/available-capabilities.php:88
+msgid "Plugin Capabilities"
+msgstr ""
+
+#: config/available-capabilities.php:93
+msgid "Enables the management of ait announcements bar settings"
+msgstr ""
+
+#: config/available-capabilities.php:99
+msgid "Enables the management of ait events pro settings"
+msgstr ""
+
+#: config/available-capabilities.php:105
+msgid "Enables the management of ait item extension settings"
+msgstr ""
+
+#: config/available-capabilities.php:112
+msgid "Enables the management of ait languages settings"
+msgstr ""
+
+#: config/available-capabilities.php:118
+msgid "Enables the management of ait directory migrations settings"
+msgstr ""
+
+#: config/available-capabilities.php:125
+msgid "Enables the management of ait updater settings"
+msgstr ""
+
+#: config/available-capabilities.php:131
+msgid "Enables the management of ait quick comments settings"
+msgstr ""
+
+#: config/available-capabilities.php:137
+msgid "Enables the management of ait sysinfo settings"
+msgstr ""
+
+#: config/available-capabilities.php:145
+msgid "Custom Post Type Capabilities "
+msgstr ""
+
+#: config/available-capabilities.php:149
+msgid "Posts"
+msgstr ""
+
+#: config/available-capabilities.php:150
+msgid "Enables the management of posts custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:173
+msgid "Pages"
+msgstr ""
+
+#: config/available-capabilities.php:174
+msgid "Enables the management of pages custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:196
+msgid "Advertisments"
+msgstr ""
+
+#: config/available-capabilities.php:197
+msgid "Enables the management of advertisments custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:214
+msgid "Events"
+msgstr ""
+
+#: config/available-capabilities.php:215
+msgid "Enables the management of events custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:232
+msgid "Events Pro"
+msgstr ""
+
+#: config/available-capabilities.php:233
+msgid "Enables the management of events pro custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:252
+msgid "Facilities"
+msgstr ""
+
+#: config/available-capabilities.php:253
+msgid "Enables the management of facility custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:270
+msgid "FAQ"
+msgstr ""
+
+#: config/available-capabilities.php:271
+msgid "Enables the management of faq custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:288
+msgid "Food Menu"
+msgstr ""
+
+#: config/available-capabilities.php:289
+msgid "Enables the management of food menu custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:310
+msgid "Infopanels"
+msgstr ""
+
+#: config/available-capabilities.php:311
+msgid "Enables the management of infopanels custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:328
+msgid "Job Offers"
+msgstr ""
+
+#: config/available-capabilities.php:329
+msgid "Enables the management of job offers custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:346
+msgid "Matches"
+msgstr ""
+
+#: config/available-capabilities.php:347
+msgid "Enables the management of matches custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:364
+msgid "Members"
+msgstr ""
+
+#: config/available-capabilities.php:365
+msgid "Enables the management of members custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:382
+msgid "Obituaries"
+msgstr ""
+
+#: config/available-capabilities.php:383
+msgid "Enables the management of obituaries custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:400
+msgid "Partners"
+msgstr ""
+
+#: config/available-capabilities.php:401
+msgid "Enables the management of partners custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:418
+msgid "Portfolio"
+msgstr ""
+
+#: config/available-capabilities.php:419
+msgid "Enables the management of portfolio custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:436
+msgid "Price Tables"
+msgstr ""
+
+#: config/available-capabilities.php:437
+msgid "Enables the management of price tables custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:454
+msgid "Item Reviews"
+msgstr ""
+
+#: config/available-capabilities.php:455
+msgid "Enables the management of reviews custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:473
+msgid "Services"
+msgstr ""
+
+#: config/available-capabilities.php:474
+msgid "Enables the management of services custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:491
+msgid "Special Offers"
+msgstr ""
+
+#: config/available-capabilities.php:492
+msgid "Enables the management of special offers custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:509
+msgid "Testimonials"
+msgstr ""
+
+#: config/available-capabilities.php:510
+msgid "Enables the management of testimonials custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:527
+msgid "Toggles"
+msgstr ""
+
+#: config/available-capabilities.php:528
+msgid "Enables the management of toggles custom post type"
+msgstr ""
+
+#: config/available-capabilities.php:545
+msgid "Tours"
+msgstr ""
+
+#: config/available-capabilities.php:546
+msgid "Enables the management of tours custom post type"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "User role permissions manager"
+msgstr ""

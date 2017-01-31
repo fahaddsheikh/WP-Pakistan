@@ -1,0 +1,46 @@
+{if $wp->isSingular('ait-item')}
+
+	{* when element is used on item detail page, dont render anything ... everything is rendered on single detail page *}
+
+	<script id="{$htmlId}-script">
+	jQuery(document).ready(function(){
+		jQuery("#{!$htmlId}-main").hide();
+	});	
+	</script>
+
+{else}
+
+	{include $element->common('header')}
+
+	<div id="{$htmlId}" class="{$htmlClass}">
+
+		{*includePart get-directions-form, 
+			inputsOverride => array('categories' => false, 'categoryRadius' => false),
+			inputsValues => array('directions_address_end' => $el->option('destinationAddress'))
+		*}
+
+		{includePart get-directions-form, 
+			inputsValues => array('directions_address_end' => $el->option('destinationAddress'))
+		}
+
+		{includePart get-directions-container}
+
+	</div>
+
+	<script id="{$htmlId}-script">
+	jQuery(window).load(function(){
+		{if $options->theme->general->progressivePageLoading}
+			if(!isResponsive(1024)){
+				jQuery("#{!$htmlId}-main").waypoint(function(){
+					jQuery("#{!$htmlId}-main").addClass('load-finished');
+				}, { triggerOnce: true, offset: "95%" });
+			} else {
+				jQuery("#{!$htmlId}-main").addClass('load-finished');
+			}
+		{else}
+			jQuery("#{!$htmlId}-main").addClass('load-finished');
+		{/if}
+	});
+	</script>
+
+{/if}
