@@ -55,37 +55,26 @@ function bep_shortcode_events($bep_shortcode_events_attr) {
 	$return_string.=	"<div class='{$prefix}block-row'>";
 	$return_string.=		"<div class='{$prefix}event-template'>";
 									// The Loop for biggrid Square Image Template
-									if ( $bep_shortcode_events_query ->have_posts() ) :
-										while ( $bep_shortcode_events_query ->have_posts() ) : $bep_shortcode_events_query ->the_post();
-											$bep_event_array = get_post_meta(get_the_id(), '_ait-event-pro_event-pro-data', true);
-											$bep_event_date = strtotime($bep_event_array['dates'][0]['dateFrom']);
-											$bep_eventfrom_date = date('j', $bep_event_date);
-											$bep_eventfrom_date_suffix = date('S', $bep_event_date);
-											$bep_eventfrom_month = date('M', $bep_event_date);
-	$return_string.=						"<div class='bep_module_6 bep_module_wrap {$prefix}event events-container ratings-shown events-ajax-shown'>";
-	$return_string.=							"<div class='{$prefix}module-thumb'>";
-	$return_string.=								"<a href='" . get_permalink(get_post_meta(get_the_id(), 'post_id', true)) . "' rel='bookmark' title='".get_the_title(get_post_meta(get_the_id(), 'post_id', true))."'>";
-	$return_string.=				 				"<span class='event-date'>" . $bep_eventfrom_date . "<sup>" . $bep_eventfrom_date_suffix . "</sup></span>";
-	$return_string.=				 				"<span class='event-month'>" . $bep_eventfrom_month . "</span>";
-	$return_string.=								"</a>";
-	$return_string.=							"</div>";
+								if ( $bep_shortcode_events_query ->have_posts() ) :
+									while ( $bep_shortcode_events_query ->have_posts() ) : $bep_shortcode_events_query ->the_post();
+
+											
+
+	$return_string.=					"<div class='bep_module_6 bep_module_wrap {$prefix}event events-container ratings-shown events-ajax-shown'>";
+	$return_string.=						bep_custom_thumb("","",'event');
 	$return_string.=							"<div class='item-details'>";
 	$return_string.=								"<div class='{$prefix}event-title'>";
-	$return_string.= 									"<h3 class='entry-title {$prefix}module-title'>";
-	$return_string.=										"<a href='" .get_permalink( get_post_meta(get_the_id(), 'post_id', true) ). "'>" .get_the_title( get_post_meta(get_the_id(), 'post_id', true) ). "</a>";
-	$return_string.=									"</h3>";
-	$return_string.=                        	"</div>";
-	$return_string.=								"<div class='{$prefix}event-description'>";
-	$return_string.=									substr( strip_tags(get_the_content( get_the_ID() )), 0, 70) . '...';
-	$return_string.=								"</div>";
+	$return_string.= 									bep_custom_title();
+	$return_string.=                    			"</div>";
+	$return_string.=								bep_custom_excerpt(0,70);
 	$return_string.=							"</div>";
-	$return_string.=						"</div>";
-											wp_reset_postdata();
-										endwhile;
-									endif;
-	$return_string.=			"</div>";								
-	$return_string.=		"</div>";
-	$return_string.=		"<div class='clearfix'></div>";		
+	$return_string.=					"</div>";
+									wp_reset_postdata();
+									endwhile;
+								endif;
+	$return_string.=		"</div>";								
+	$return_string.=	"</div>";
+	$return_string.=	"<div class='clearfix'></div>";		
 	$return_string.=	"</div>";
 	$return_string.="</div>";
 				

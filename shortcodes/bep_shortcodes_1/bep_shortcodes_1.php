@@ -59,7 +59,20 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 									// The Loop for biggrid Square Image Template
 									if ( $bep_shortcode_1_query_1->have_posts() ) :
 										while ( $bep_shortcode_1_query_1->have_posts() ) : $bep_shortcode_1_query_1->the_post();
-											include( get_stylesheet_directory() .'/shortcodes/bep_shortcodes_1/bep_shortcode_1_big_template.php');
+											$bep_selectedtype = get_post_type();
+											$return_string.='<div class="bep_module_4 bep_module_wrap bep_animation-stack">';
+											$return_string.='	<div class="bep_module-image">';
+											$return_string.= 		bep_custom_thumb('324','235');
+											$return_string.=		bep_custom_category();
+											$return_string.='	</div>';
+											$return_string.= 	bep_custom_title();
+											$return_string.='	<div class="bep_module-meta-info">';
+											$return_string.= 		bep_custom_author_name();
+											$return_string.= 		bep_custom_time();
+											$return_string.='	</div>';
+											$return_string.= 	bep_custom_excerpt(0,300);
+											$return_string.='</div>';
+
 											wp_reset_postdata();
 										endwhile;
 									endif;	
@@ -68,7 +81,17 @@ function bep_shortcode_1($bep_shortcode_1_attr) {
 									// The Loop for biggrid Square Image Template
 									if ( $bep_shortcode_1_query_2->have_posts() ) :
 										while ( $bep_shortcode_1_query_2->have_posts() ) : $bep_shortcode_1_query_2->the_post();
-											include( get_stylesheet_directory() .'/shortcodes/bep_shortcodes_1/bep_shortcode_1_small_template.php');
+											$bep_selectedtype = get_post_type();
+											$return_string.= $bep_shortcode_1_query->current_post;				
+											$return_string.='	<div class="bep_module_6 bep_module_wrap bep_animation-stack">';
+											$return_string.=		 bep_custom_thumb('100','70');
+											$return_string.='		<div class="item-details">';
+											$return_string.=			bep_custom_title() ;
+											$return_string.='			<div class="bep_module-meta-info">';
+											$return_string.= 				bep_custom_time();   
+											$return_string.='			</div>';
+											$return_string.='		</div>';
+											$return_string.='	</div>';
 											wp_reset_postdata();
 										endwhile;
 									endif;

@@ -33,12 +33,43 @@ function bep_shortcode_reviews($bep_shortcode_reviews_attr) {
 										            $bep_review_categories[] =  $bep_review_parent_category->term_id;
 										    	}
 											}
-										    if (!empty($bep_provided_category) && in_array($bep_provided_category, $bep_review_categories)) {
-										    	include( get_stylesheet_directory() . '/shortcodes/bep_latest_reviews/bep_reviews-shortcode-template.php' );
+										    if ((!empty($bep_provided_category) && (in_array ($bep_provided_category, $bep_review_categories))) || ((empty($bep_provided_category) && ($bep_provided_category == 0)))){
+										    	$bep_selectedtype = get_post_type();
+												$return_string.="<div class='bep_module_6 bep_module_wrap {$prefix}review reviews-container ratings-shown reviews-ajax-shown'>";
+												$return_string.=	bep_custom_thumb('100','70');
+												$return_string.=	"<div class='item-details'>";
+												$return_string.=		"<div class='{$prefix}review-title'>";
+												$return_string.= 			bep_custom_title();
+												$return_string.=        "</div>";
+
+												$return_string.=	"<div class='{$prefix}review-rating review-container'>";
+																		$rating_overall = get_post_meta(get_the_ID(), 'rating_mean', true);
+																		$rating_data = (array)json_decode(get_post_meta(get_the_ID(), 'ratings', true));
+																		$ratings = '';
+																		if(is_array($rating_data) && count($rating_data) > 0){
+												$return_string.=		"<div class='review-stars'>";
+												$return_string.=			"<span class='review-rating-overall' data-score='".$rating_overall."'></span>";
+												$return_string.=			"<div class='review-ratings'>";
+																			foreach ($rating_data as $index => $rating) {
+																			 	if ($rating->question != "") {
+												$return_string.=					"<div class='review-rating'>";
+												$return_string.=						"<span class='review-rating-question'>" .$rating->question. "</span>";
+												$return_string.= 						"<span class='review-rating-stars' data-score='".$rating->value."'></span>";
+												$return_string.= 					"</div>";
+																}
+															}
+												$return_string.=			"</div>";
+												$return_string.=		"</div>";
+														}
+												$return_string.=	"</div>";
+												$return_string.=	"<div class='bep_module-meta-info'>";
+												$return_string.=		bep_custom_author_name();   
+												$return_string.=		bep_custom_time();
+												$return_string.=		bep_custom_excerpt(0,70);
+												$return_string.=	"</div>";
+												$return_string.="</div>";
 											}
-											if (empty($bep_provided_category) && $bep_provided_category == 0) {
-										    	include( get_stylesheet_directory() . '/shortcodes/bep_latest_reviews/bep_reviews-shortcode-template.php' );
-											}
+											
 											unset($bep_review_categories);
 											wp_reset_postdata();
 										endwhile;

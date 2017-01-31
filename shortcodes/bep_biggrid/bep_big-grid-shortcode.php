@@ -90,7 +90,21 @@ function bep_biggrid( $bep_biggrid_square_shortcode_atts ) {
 	// The Loop for biggrid Square Image Template
 	if ( $bep_biggrid_square_big_query->have_posts() ) :
 		while ( $bep_biggrid_square_big_query->have_posts() ) : $bep_biggrid_square_big_query->the_post(); 
-			include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big_grid_square_big_template_4.php' );
+				$return_string .=	"<div class='{$prefix}module_mx5 {$prefix}animation-stack {$prefix}big-grid-post-0 {$prefix}big-grid-post {$prefix}big-thumb'>";
+				$return_string .=		bep_custom_thumb(649,500);          
+				$return_string .=		"<div class='{$prefix}meta-info-container'>";
+				$return_string .=			"<div class='{$prefix}meta-align''>";
+				$return_string .=				"<div class='{$prefix}big-grid-meta'>	";
+				$return_string .=					bep_custom_category();
+				$return_string .=					bep_custom_title();               
+				$return_string .=				"</div>";
+				$return_string .=				"<div class='{$prefix}module-meta-info'>";
+				$return_string .=					bep_custom_author_name();            
+				$return_string .=					bep_custom_time();  
+				$return_string .=				"</div>";
+				$return_string .=			"</div>";
+				$return_string .=		"</div>";
+				$return_string .=	"</div>";
 			wp_reset_postdata();
 		endwhile;
 	endif;
@@ -98,7 +112,17 @@ function bep_biggrid( $bep_biggrid_square_shortcode_atts ) {
 	// The Loop for biggrid Horizontal Image Template
 	if ( $bep_biggrid_horizontal_query->have_posts() ) :
 		while ( $bep_biggrid_horizontal_query->have_posts() ) : $bep_biggrid_horizontal_query->the_post(); 
-			include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big_grid_square_horizontal_template_4.php' );
+				$return_string .=	"<div class='{$prefix}module_mx11 {$prefix}animation-stack {$prefix}big-grid-post-1 {$prefix}big-grid-post {$prefix}medium-thumb'>	";
+				$return_string .=		bep_custom_thumb(649,500);        
+				$return_string .=		"<div class='{$prefix}meta-info-container'>	";
+				$return_string .=			"<div class='{$prefix}meta-align'>	";
+				$return_string .=				"<div class='{$prefix}big-grid-meta'>	";
+				$return_string .=					bep_custom_category();
+				$return_string .=					bep_custom_title();           
+				$return_string .=				"</div>";
+				$return_string .=			"</div>";
+				$return_string .=		"</div>";
+				$return_string .=	"</div>"; 
 			wp_reset_postdata();
 		endwhile;
 	endif;
@@ -106,7 +130,17 @@ function bep_biggrid( $bep_biggrid_square_shortcode_atts ) {
 	// The Loop for biggrid Small One Image Template
 	if ( $bep_biggrid_small_one_query->have_posts() ) :
 		while ( $bep_biggrid_small_one_query->have_posts() ) : $bep_biggrid_small_one_query->the_post(); 
-			include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big_grid_square_small_one_template_4.php' );
+				$return_string .=	"<div class='{$prefix}module_mx6 {$prefix}animation-stack {$prefix}big-grid-post-2 {$prefix}big-grid-post {$prefix}small-thumb'>	";
+				$return_string .=		bep_custom_thumb(324,235);
+				$return_string .=		"<div class='{$prefix}meta-info-container'>	";
+				$return_string .=			"<div class='{$prefix}meta-align'>	";
+				$return_string .=				"<div class='{$prefix}big-grid-meta'>	";
+				$return_string .=					bep_custom_category();
+				$return_string .=					bep_custom_title(); 
+				$return_string .=				"</div>";
+				$return_string .=			"</div>";
+				$return_string .=		"</div>";
+				$return_string .=	"</div>";
 			wp_reset_postdata();
 		endwhile;
 	endif;
@@ -114,7 +148,17 @@ function bep_biggrid( $bep_biggrid_square_shortcode_atts ) {
 	// The Loop for biggrid Small Two Image Template
 	if ( $bep_biggrid_small_two_query->have_posts() ) :
 		while ( $bep_biggrid_small_two_query->have_posts() ) : $bep_biggrid_small_two_query->the_post(); 
-			include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big_grid_square_small_two_template_4.php' );
+				$return_string .=	"<div class='{$prefix}module_mx6 {$prefix}animation-stack {$prefix}big-grid-post-3 {$prefix}big-grid-post {$prefix}small-thumb'>	";
+				$return_string .=		bep_custom_thumb(324,235);
+				$return_string .=		"<div class='{$prefix}meta-info-container'>	";
+				$return_string .=			"<div class='{$prefix}meta-align'>	";
+				$return_string .=				"<div class='{$prefix}big-grid-meta'>	";
+				$return_string .=					bep_custom_category();
+				$return_string .=					bep_custom_title(); 
+				$return_string .=				"</div>";
+				$return_string .=			"</div>";
+				$return_string .=		"</div>";
+				$return_string .=	"</div>";
 			wp_reset_postdata();
 		endwhile;
 	endif;

@@ -15,7 +15,7 @@ include( get_stylesheet_directory() .'/shortcodes/bep_shortcodes_1/bep_shortcode
 include( get_stylesheet_directory() .'/shortcodes/bep_shortcodes_3/bep_shortcode_3.php');
 include( get_stylesheet_directory() .'/shortcodes/bep_latest_reviews/bep_reviews-shortcode.php');
 include( get_stylesheet_directory() .'/shortcodes/bep_latest_events/bep_events-shortcode.php');
-
+include( get_stylesheet_directory() .'/shortcodes/bep_custom_functions.php');
 
 /* 
 *
@@ -56,6 +56,7 @@ add_action( 'add_meta_boxes', 'bep_register_meta_boxes' );
  *
  * @param WP_Post $post Current post object.
  */
+
 function be_event_datefrom_content_callback( $post ) {
     // make sure the form request comes from WordPress.
     wp_nonce_field( basename( __FILE__ ), 'be_event_datefrom_content_nonce' );
