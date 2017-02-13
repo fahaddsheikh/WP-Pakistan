@@ -50,7 +50,18 @@ function bep_shortcode_3($bep_shortcode_3_attr) {
 									// The Loop for biggrid Square Image Template
 									if ( $bep_shortcode_3_query->have_posts() ) :
 										while ( $bep_shortcode_3_query->have_posts() ) : $bep_shortcode_3_query->the_post();
-											include( get_stylesheet_directory() .'/shortcodes/bep_shortcodes_3/bep_shortcode_3-template.php');
+											$bep_selectedtype = get_post_type();
+											$return_string.="<div class='{$prefix}module_10 {$prefix}module_wrap {$prefix}animation-stack'>";
+											$return_string.= 	bep_custom_thumb('324','235');
+											$return_string.="	<div class='item-details'>";
+											$return_string.=  		bep_custom_title();
+											$return_string.="		<div class='{$prefix}module-meta-info'>";
+											$return_string.= 			bep_custom_author_name();
+											$return_string.= 			bep_custom_time();
+											$return_string.="		</div>";
+											$return_string.= 		bep_custom_excerpt(0,300);
+											$return_string.="	</div>";
+											$return_string.="</div>";
 											wp_reset_postdata();
 										endwhile;
 									endif;	

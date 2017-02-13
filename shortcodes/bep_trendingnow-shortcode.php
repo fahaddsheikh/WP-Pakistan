@@ -29,7 +29,7 @@ function bep_trendingnow() {
     if ( $bep_trendingnow_query->have_posts() ) :
         while ( $bep_trendingnow_query->have_posts() ) : $bep_trendingnow_query->the_post(); 
             $return_string .=   "<div class='{$prefix}module_trending_now {$prefix}trending-now-post'>";
-            $return_string .=       "<h3 class='entry-title {$prefix}module-title'><a href='" . get_permalink() . "' rel='bookmark' title='" . get_the_title() . "'>" . get_the_title() . "</a></h3>";
+            $return_string .=       bep_custom_title();
             $return_string .=   "</div>";
             wp_reset_postdata();
         endwhile;

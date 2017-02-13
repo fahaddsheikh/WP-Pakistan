@@ -40,17 +40,15 @@
 								 			<div class="archive-container">
 									 			<?php while ( have_posts() ) : the_post(); ?>
 								 						<div class='bep_module_6 bep_module_wrap bep_review reviews-container ratings-shown reviews-ajax-shown'>
-								 							<div class='bep_module-thumb'>
-								 								<a href='<?php echo get_permalink(get_post_meta(get_the_id(), 'post_id', true)) ?>' rel='bookmark' title='<?php echo get_the_title(get_post_meta(get_the_id(), 'post_id', true)) ?>'>
-								 				 					<?php echo get_the_post_thumbnail( get_post_meta(get_the_id(), 'post_id', true) ,  'bep_100x70' ) ?>
-								 								</a>
-								 							</div>
+								 							<?php
+								 							$return_string .= bep_custom_thumb(100,70); 
+								 							?>
 								 							<div class='item-details'>
 								 								<div class='bep_review-title'>
-								  									<h3 class='entry-title bep_module-title'>
-								 										<a href='<?php echo  get_permalink( get_post_meta(get_the_id(), 'post_id', true) ) ?>'> <?php echo  get_the_title( get_post_meta(get_the_id(), 'post_id', true) )  ?> 
-								 										</a>
-								 									</h3>
+								  								<?php
+									 							$return_string .= bep_custom_title(); 
+									 							?>
+								 							<di
 									                         	</div>
 									                        	
 									                        	<?php 
@@ -95,22 +93,20 @@
 								 												foreach ( $profile_types  as $profile_type ) {
 						 											        		$out[] = esc_html( $profile_type->name );
 																	        	}
-																	        	echo "<span class='bep_post-author-name'>";
-																	        	echo implode( ', ', $out );
-																	        	echo "<span>-</span>";
+																	        	
+									 												$return_string .= bep_custom_author_name(); 
+									 											
 																	        	unset($out);
 								 											}
 								 										?>
 								 									</span> 
-								 									<span class='bep_post-date'>
-								 										<time class='entry-date updated bep_module-date' datetime='". get_the_date('c' , get_the_ID() ) ."'>
-								 										<?php echo get_the_date('F j,Y' , get_the_ID() ); ?>
-								 										</time>
-								 									</span>
+								 									<?php
+									 												$return_string .= bep_custom_time(); 
+									 								?>
 								 								</div>
-								 								<div class='bep_review-description'>
-								 									<?php echo substr( strip_tags(get_the_content( get_the_ID() )), 0, 150) . '...'; ?>
-								 								</div>
+								 								<?php
+									 												$return_string .= bep_custom_excerpt(0,150); 
+									 								?>
 								 							</div>
 								 						</div>
 													<?php wp_reset_postdata(); ?>
