@@ -1,22 +1,22 @@
-<?php if ( have_posts() ) : ?>
-	<div id="main" class="elements">
-		<div class="main-sections bep_archive">
+<div id="main" class="elements">
+	<div class="main-sections bep_archive">
+		<?php if ( have_posts() ) : ?>
 			<section id="elm-text-_e6b34f6cfb915-main" class="elm-main elm-text-main  load-finished">
 				<div class="elm-wrapper elm-text-wrapper">
 				<?php
 				$current_posttype = $wp_query->query;
-				$shortcode_businesses = sprintf(
-					    '[bep_biggrid_single bep_post_type="%1$s" bep_taxonomy_type="ait-items"]',
-					    $current_posttype['post_type']
-					);
-				$shortcode_profile = sprintf(
-					    '[bep_biggrid_single bep_post_type="%1$s" bep_taxonomy_type="profile-type"]',
-					    $current_posttype['post_type']
-					);
-				if ($current_posttype['post_type'] == 'ait-item') {
+				if ($current_posttype['post_type'] == 'ait-item') {	
+					$shortcode_businesses = sprintf(
+						    '[bep_biggrid_single bep_post_type="%1$s" bep_taxonomy_type="ait-items"]',
+						    $current_posttype['post_type']
+						);
 					echo do_shortcode( $shortcode_businesses );
 				}
 				elseif ($current_posttype['post_type'] == 'profile') {
+					$shortcode_profile = sprintf(
+						    '[bep_biggrid_single bep_post_type="%1$s" bep_taxonomy_type="profile-type"]',
+						    $current_posttype['post_type']
+						);
 					echo do_shortcode( $shortcode_profile );
 				}
 				?>
@@ -88,8 +88,8 @@
 								 											 	$profile_types = get_the_terms( $post->id, 'profile-type' );
 								 											}
 								 											if ($current_posttype['post_type'] == 'ait-review') {
-								 											 	echo get_the_title();
-								 											 	echo "<span>-</span>";
+								 											 	echo "<span class='bep_post-author-name'>" .get_the_title() . "</span>";
+								 											 	echo "<span> -</span>";
 								 											}
 								 											if (isset($profile_types) && !empty($profile_types)) {
 								 												foreach ( $profile_types  as $profile_type ) {
@@ -97,7 +97,7 @@
 																	        	}
 																	        	echo "<span class='bep_post-author-name'>";
 																	        	echo implode( ', ', $out );
-																	        	echo "<span>-</span>";
+																	        	echo "<span> -</span>";
 																	        	unset($out);
 								 											}
 								 										?>
@@ -130,6 +130,27 @@
 					</div>
 				</div>
 			</section>
-		</div>
+		<?php else : ?>
+			<section id="elm-content-7-main" class="elm-main elm-content-main  load-finished">
+				<div class="elm-wrapper elm-content-wrapper">
+					<div id="primary" class="content-area">
+						<div id="content" class="content-wrap" role="main">
+							<article id="post-0" class="post no-results not-found">
+								<header class="entry-header">
+									<h1 class="entry-title">
+										Nothing Found
+									</h1>
+								</header>
+								<div class="entry-content">
+									<p>
+										Apologies, but no results were found.
+									</p>
+								</div><!-- .entry-content -->
+							</article><!-- #post-0 -->
+						</div><!-- #content -->
+					</div><!-- #primary -->
+				</div><!-- .elm-wrapper -->
+			</section>
+		<?php endif; ?>
 	</div>
-<?php endif; ?>
+</div>

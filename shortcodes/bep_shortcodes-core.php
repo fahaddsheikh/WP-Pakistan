@@ -8,14 +8,14 @@
 
 //Include ALL PHP Shortcode Details
 
-include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big-grid-shortcode.php' );
-include( get_stylesheet_directory() . '/shortcodes/bep_biggrid/bep_big-grid_single_shortcode.php' );
-include( get_stylesheet_directory() . '/shortcodes/bep_trendingnow/bep_trendingnow-shortcode.php' );
-include( get_stylesheet_directory() .'/shortcodes/bep_shortcodes_1/bep_shortcodes_1.php');
-include( get_stylesheet_directory() .'/shortcodes/bep_shortcodes_3/bep_shortcode_3.php');
-include( get_stylesheet_directory() .'/shortcodes/bep_latest_reviews/bep_reviews-shortcode.php');
-include( get_stylesheet_directory() .'/shortcodes/bep_latest_events/bep_events-shortcode.php');
-
+include( get_stylesheet_directory() . '/shortcodes/bep_big-grid-shortcode.php' );
+include( get_stylesheet_directory() . '/shortcodes/bep_big-grid_single_shortcode.php' );
+include( get_stylesheet_directory() . '/shortcodes/bep_trendingnow-shortcode.php' );
+include( get_stylesheet_directory() .'/shortcodes/bep_shortcodes_1.php');
+include( get_stylesheet_directory() .'/shortcodes/bep_shortcode_3.php');
+include( get_stylesheet_directory() .'/shortcodes/bep_reviews-shortcode.php');
+include( get_stylesheet_directory() .'/shortcodes/bep_events-shortcode.php');
+include( get_stylesheet_directory() .'/shortcodes/bep_custom_functions.php');
 
 /* 
 *
@@ -37,7 +37,7 @@ function bep_include_shortcode_styles() {
     wp_enqueue_style( 'bep_shortodes_reviews-style', get_stylesheet_directory_uri() . '/shortcodes/bep_shortcodes_style-core.css' );
     
     //wp_enqueue_style( 'bep_trendingnow-shortcode-style', get_stylesheet_directory_uri() . '/shortcodes/bep_trendingnow/bep_trendingnow-shortcode-style.css' );
-    wp_enqueue_script( 'bep_trendingnow-shortcode-script', get_stylesheet_directory_uri() . '/shortcodes/bep_trendingnow/bep_trendingnow-shortcode-script.js', true );
+    wp_enqueue_script( 'bep_shortcode-script', get_stylesheet_directory_uri() . '/shortcodes/bep_shortcode-script.js', true );
     }
 add_action( 'wp_enqueue_scripts', 'bep_include_shortcode_styles' );
 
@@ -56,6 +56,7 @@ add_action( 'add_meta_boxes', 'bep_register_meta_boxes' );
  *
  * @param WP_Post $post Current post object.
  */
+
 function be_event_datefrom_content_callback( $post ) {
     // make sure the form request comes from WordPress.
     wp_nonce_field( basename( __FILE__ ), 'be_event_datefrom_content_nonce' );
