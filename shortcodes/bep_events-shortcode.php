@@ -50,13 +50,13 @@ function bep_shortcode_events($bep_shortcode_events_attr) {
 	$prefix = "bep_";
 	$return_string ="<div class='{$prefix}block_wrap {$prefix}block_1 {$prefix}pb-border-top red-block {$prefix}shortcode_events'>";
 	$return_string.=	"<div class='bep-block-title-wrap'><h4 class='block-title'><span style='margin-right: 0px;'>".$bep_shortcode_events_attr['bep_title']."</span></h4>";
-	$return_string.="</div>";
-	$return_string.="<div class='{$prefix}block_inner'>";
-	$return_string.=	"<div class='{$prefix}block-row'>";
-	$return_string.=		"<div class='{$prefix}event-template'>";
+	$return_string.=	"</div>";
+	$return_string.=	"<div class='{$prefix}block_inner'>";
+	$return_string.=		"<div class='{$prefix}block-row'>";
+	$return_string.=			"<div class='{$prefix}event-template'>";
 									// The Loop for biggrid Square Image Template
-								if ( $bep_shortcode_events_query ->have_posts() ) :
-									while ( $bep_shortcode_events_query ->have_posts() ) : $bep_shortcode_events_query ->the_post();
+									if ( $bep_shortcode_events_query ->have_posts() ) :
+										while ( $bep_shortcode_events_query ->have_posts() ) : $bep_shortcode_events_query ->the_post();
 	$return_string.=					"<div class='bep_module_6 bep_module_wrap {$prefix}event events-container ratings-shown events-ajax-shown'>";
 	$return_string.=						bep_custom_thumb("","","normal");
 	$return_string.=							"<div class='item-details'>";
@@ -69,9 +69,9 @@ function bep_shortcode_events($bep_shortcode_events_attr) {
 									wp_reset_postdata();
 									endwhile;
 								endif;
-	$return_string.=		"</div>";								
-	$return_string.=	"</div>";
-	$return_string.=	"<div class='clearfix'></div>";		
+	$return_string.=			"</div>";								
+	$return_string.=		"</div>";
+	$return_string.=		"<div class='clearfix'></div>";		
 	$return_string.=	"</div>";
 	$return_string.="</div>";
 				
@@ -79,8 +79,6 @@ function bep_shortcode_events($bep_shortcode_events_attr) {
 	$return_string.= "<a href='#' class='{$prefix}ajax-prev-page ajax-page-disabled'><i class='{$prefix}icon-font {$prefix}icon-menu-left'></i></a><a href='#'' class='bep-ajax-next-page'><i class='{$prefix}icon-font {$prefix}icon-menu-right'></i>";
 	$return_string.=	"</a>";
 	$return_string.=	"</div>";*/
-
-	$return_string.="</div>";
 
 	wp_reset_query();
    	return $return_string;

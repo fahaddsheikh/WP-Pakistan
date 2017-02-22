@@ -58,23 +58,27 @@ add_action('init','unregister_unused_post_types');
 
 function my_change_sort_order($query){
 
-    if(is_post_type_archive('ait-item') ||  is_post_type_archive('ait-review') || is_post_type_archive('ait-event-pro')):
+    if(is_post_type_archive('ait-item') ||  is_post_type_archive('ait-review')):
 
      //If you wanted it for the archive of a custom post type use: is_post_type_archive( $post_type )
 
        //Set the order ASC or DESC
 
-       $query->set( 'order', 'DESC' );
+       $query->set( 'order', 'DSC' );
 
        //Set the orderby
 
-       $query->set( 'orderby', 'date' );
+       $query->set( 'orderby', 'post_date' );
+
+       $meta_query = array(array());
+       $query->set( 'meta_query', $meta_query );
+
 
     endif;    
 
 };
 
-add_action( 'pre_get_posts', 'my_change_sort_order'); 
+add_action( 'pre_get_posts', 'my_change_sort_order', 100000,100000); 
 
 
 

@@ -377,6 +377,10 @@ Add your custom styles in this file so it is easier to update the theme.
 	text-transform: capitalize !important; 
 }
 
+.bep_archive .sidebar-right-area {
+    width: 30% !important;
+}
+
 /* Responsive CSS*/ 
 
 @media (max-width: 640px) {
